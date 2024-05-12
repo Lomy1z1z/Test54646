@@ -10,7 +10,7 @@ public class PlayerM : MonoBehaviour
     [SerializeField] Transform gun;
     [SerializeField] GameObject bullet;
     public Transform target;
-    public Enemy enemy;
+    //public Enemy enemy;
     
     
 
@@ -21,7 +21,7 @@ public class PlayerM : MonoBehaviour
     void Start()
     {
         player = GetComponent<Rigidbody>();
-        enemy = FindObjectOfType<Enemy>();
+        //enemy = FindObjectOfType<Enemy>();
         
 
     }
@@ -71,30 +71,14 @@ public class PlayerM : MonoBehaviour
     public void Shooting(){
         if(target != null){
         Instantiate(bullet,gun.position,transform.rotation);
-        // transform.LookAt(target);
+        
         }
         
          
     }
 
 
-    //  public void OnTriggerStay(Collider other){
-
-    //      if(other.gameObject.tag == "Enemy"){
-    //          target = other.transform;
-    //           Debug.Log(other.name);
-             
-             
-    //      }
-    //  }
-
-    //  public void OnTriggerExit(Collider other){
-    //     if(other.gameObject.tag == "Enemy"){
-    //          target = null;
-             
-    //      }
-
-    //  }
+    
 
     
 

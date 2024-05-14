@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
 
         
        transform.position =  Vector3.MoveTowards(transform.position,player.target.position,bulletSpeed * Time.deltaTime);
+       //bullet.AddForce(transform.forward * bulletSpeed * Time.deltaTime);
         
     }
 

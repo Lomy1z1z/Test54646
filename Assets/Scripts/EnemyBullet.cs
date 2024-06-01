@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBullet : MonoBehaviour
+public class EnemyBullet : Bullet
 {
     Rigidbody bulletBody;
     [SerializeField]float enemyBulletSpeed = 5;
@@ -31,9 +31,9 @@ public class EnemyBullet : MonoBehaviour
     }
 
 
-     public void OnCollisionEnter(Collision other){
-        if(other.gameObject.tag == "Player" || other.gameObject.tag == "Enemy" ){
-            Destroy(gameObject);
-        }
-    }
+     public override void Hit(GameObject other)
+     {
+        base.Hit(other);
+
+     }
 }

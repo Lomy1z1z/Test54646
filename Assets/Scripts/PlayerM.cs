@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerM : MonoBehaviour
 {
-    public Rigidbody player;
-    public Joystick joystick;
-    public float runspeed = 5;
+    [SerializeField] public Rigidbody player;
+    [SerializeField] private Joystick joystick;
+    [SerializeField] private float runspeed = 5;
     [SerializeField] Transform gun;
     [SerializeField] GameObject bullet;
     public Transform target;
@@ -19,6 +20,7 @@ public class PlayerM : MonoBehaviour
     public float dashForce = 500;
     public float dashTimer;
     private bool isDashing = false;
+    
 
     
     
@@ -32,7 +34,7 @@ public class PlayerM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponent<Rigidbody>();
+        //player = GetComponent<Rigidbody>();
         
         //enemy = FindObjectOfType<Enemy>();
         
@@ -50,7 +52,7 @@ public class PlayerM : MonoBehaviour
 
         
         // Find all enemy objects in the scene
-        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy"); // Replace "Enemy" with the tag you use for the enemy objects
+        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");  // Replace "Enemy" with the tag you use for the enemy objects
 
         // Initialize the closest distance as a large value
         float closestDistance = Mathf.Infinity;
@@ -106,8 +108,14 @@ public class PlayerM : MonoBehaviour
             dashTimer = 0;
          }
 
+         if(hp == 0)
+         {
+             SceneManager.LoadScene(0);
 
-         //transform.LookAt(target);
+         }
+
+
+         
 
          
 
@@ -118,8 +126,8 @@ public class PlayerM : MonoBehaviour
 
     public void Shooting(){
         if(target != null){
-        Instantiate(bullet,gun.position,transform.rotation);
          transform.LookAt(target);
+        Instantiate(bullet,gun.position,transform.rotation);
         
         }
         
@@ -133,13 +141,17 @@ public class PlayerM : MonoBehaviour
     }
 
     public void OnCollisionEnter(Collision other){
-        if(other.gameObject.tag == "enemyBall" && hp > 0){
+        if(other.gameObject.tag == enemyBall  && hp > 0 || other.gameObject.tag == Enemy && hp > 0){
             TakeDamage(10f);
-            Debug.Log(hp);
+            
         }
 
        
     }
+
+    private const string enemyBall = "enemyBall";
+    private const string Enemy = "Enemy";
+
 
 
     public void Dash(){
@@ -147,6 +159,13 @@ public class PlayerM : MonoBehaviour
         isDashing = true;
        
     }
+
+
+    
+            
+        
+    }
+    
 
    
 
@@ -164,4 +183,4 @@ public class PlayerM : MonoBehaviour
 
 
     
-}
+

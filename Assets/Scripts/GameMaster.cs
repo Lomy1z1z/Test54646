@@ -8,9 +8,22 @@ using TMPro;
 public class GameMaster : MonoBehaviour
 {
     public Image expImage;
+    public static GameMaster instance; 
     public float exp;
     public TMP_Text levelText;
     public int level = 1;
+    public Transform player;
+
+    private void Awake(){
+        
+
+        if(instance != null && instance != this){
+            Destroy(this);
+        }else{
+            DontDestroyOnLoad(this);
+            instance = this;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

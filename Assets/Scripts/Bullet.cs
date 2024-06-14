@@ -6,14 +6,12 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] Rigidbody bullet;
     public float bulletSpeed = 10;
-    public PlayerM player;
     public Transform playerPos;
     public List<string>  tags;
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<PlayerM>();
-       
+
         
     }
 

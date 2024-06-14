@@ -20,8 +20,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         enemyHp = enemyHpImage.fillAmount;
-        gm = FindObjectOfType<GameMaster>();
-        playerScript = FindObjectOfType<PlayerM>();
+        
         
     }
 
@@ -31,7 +30,7 @@ public class Enemy : MonoBehaviour
         enemyHpImage.fillAmount = enemyHp;
         //  dis  = Vector3.Distance(transform.position,player.position);
          
-         transform.LookAt(player);
+         transform.LookAt(GameMaster.instance.player.position);
          
          if(Time.time>=nextAttackTime){
          enemyShooting();
@@ -46,7 +45,7 @@ public class Enemy : MonoBehaviour
         if(enemyHp <= 0)
         {
             Destroy(gameObject);
-            gm.exp += 0.2f;
+            GameMaster.instance.exp += 0.2f;
          }
 
         

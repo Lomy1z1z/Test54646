@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed = 10;
     public PlayerM player;
     public Transform playerPos;
+    public List<string>  tags;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,14 +22,28 @@ public class Bullet : MonoBehaviour
     {
 
         
-       transform.position =  Vector3.MoveTowards(transform.position,player.target.position,bulletSpeed * Time.deltaTime);
-       //bullet.AddForce(transform.forward * bulletSpeed * Time.deltaTime);
+    //    transform.position =  Vector3.MoveTowards(transform.position,player.target.position,bulletSpeed * Time.deltaTime);
+       bullet.AddForce(transform.forward * bulletSpeed * Time.deltaTime);
         
     }
 
     public void OnCollisionEnter(Collision other){
-        if(other.gameObject.tag == "Enemy"){
-            Destroy(gameObject);
+        if(HitCheck(other.gameObject.tag)){
+           Hit(other.gameObject);
         }
+    }
+
+
+    public virtual void Hit(GameObject target)
+    {
+        Destroy(gameObject);
+
+
+    }
+
+    private bool HitCheck(string objTag){
+         return tags.Contains(objTag);
+         
+        
     }
 }

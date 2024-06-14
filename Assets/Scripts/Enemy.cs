@@ -29,11 +29,8 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         enemyHpImage.fillAmount = enemyHp;
-         dis  = Vector3.Distance(transform.position,player.position);
-         if(enemyHp <= 0){
-            Destroy(gameObject);
-            gm.exp += 0.2f;
-         }
+        //  dis  = Vector3.Distance(transform.position,player.position);
+         
          transform.LookAt(player);
          
          if(Time.time>=nextAttackTime){
@@ -45,14 +42,23 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage){
         enemyHp -= damage;
+
+        if(enemyHp <= 0)
+        {
+            Destroy(gameObject);
+            gm.exp += 0.2f;
+         }
+
         
     }
 
     public void OnCollisionEnter(Collision other){
-        if(other.gameObject.tag == "Bullet"){
+        if(other.gameObject.tag == Bullet){
             TakeDamage(playerScript.regulerBulletDamage);
         }
     }
+
+    private const string Bullet = "Bullet";
 
 
     public void enemyShooting(){

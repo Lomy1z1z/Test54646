@@ -21,6 +21,8 @@ public class PlayerM : MonoBehaviour
     public float dashTimer;
     private bool isDashing = false;
     
+    
+    
 
     
     
@@ -112,6 +114,10 @@ public class PlayerM : MonoBehaviour
 
          }
 
+         if(GameMaster.instance.isPooshed == true){
+            player.AddForce(transform.forward * -500);
+         }
+
 
          
 
@@ -144,11 +150,17 @@ public class PlayerM : MonoBehaviour
             
         }
 
+        if(other.gameObject.tag == MeleeEnemy && hp > 0){
+            GameMaster.instance.isPooshed = true;
+
+        }
+
        
     }
 
     private const string enemyBall = "enemyBall";
     private const string Enemy = "Enemy";
+    private const string MeleeEnemy = "MeleeEnemy";
 
 
 

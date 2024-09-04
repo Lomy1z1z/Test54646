@@ -14,6 +14,7 @@ public class EnemyBullet : Bullet
         bulletBody = GetComponent<Rigidbody>();
         enemy = FindObjectOfType<Enemy>();
         lifespan = 0;
+        
     }
 
     // Update is called once per frame

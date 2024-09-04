@@ -1,0 +1,55 @@
+# Blender MTL File: 'Deadpool.blend'
+# Material Count: 4
+
+newmtl Material
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\Deadpool\\T_M_MED_Donut_Head_D.tga
+map_Ke D:\\Deadpool\\T_M_MED_Donut_Head_E.tga
+
+newmtl lambert1
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Blender 3D\\Proekts\\Super Heroes\\deadpool\\textures\\Katana_normals.tga
+map_Kd D:\\Blender 3D\\Proekts\\Super Heroes\\deadpool\\textures\\Katana_Color.tga
+map_Ks D:\\Blender 3D\\Proekts\\Super Heroes\\deadpool\\textures\\Katana_ao.tga
+map_Ns D:\\Blender 3D\\Proekts\\Super Heroes\\deadpool\\textures\\Katana_Roughness.tga
+refl D:\\Blender 3D\\Proekts\\Super Heroes\\deadpool\\textures\\Katana_Metal.tga
+
+newmtl lambert2
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Blender 3D\\Proekts\\Super Heroes\\deadpool\\textures\\Katana_normals.tga
+map_Kd D:\\Blender 3D\\Proekts\\Super Heroes\\deadpool\\textures\\Katana_Color.tga
+map_Ks D:\\Blender 3D\\Proekts\\Super Heroes\\deadpool\\textures\\Katana_ao.tga
+map_Ns D:\\Blender 3D\\Proekts\\Super Heroes\\deadpool\\textures\\Katana_Roughness.tga
+refl D:\\Blender 3D\\Proekts\\Super Heroes\\deadpool\\textures\\Katana_Metal.tga
+
+newmtl material_1
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\Deadpool\\T_M_MED_Donut_Body_D.tga

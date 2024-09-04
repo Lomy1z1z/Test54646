@@ -12,7 +12,9 @@ public class GameMaster : MonoBehaviour
     public float exp;
     public TMP_Text levelText;
     public int level = 1;
-    public Transform player;
+    public Transform playerTransform;
+    public bool isPooshed = false;
+    
 
     private void Awake(){
         

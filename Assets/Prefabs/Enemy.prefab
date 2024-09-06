@@ -341,7 +341,6 @@ GameObject:
   - component: {fileID: 3842647012820178659}
   - component: {fileID: 7277238035530281662}
   - component: {fileID: 9218089764621651486}
-  - component: {fileID: 4653504295293519962}
   m_Layer: 3
   m_Name: Enemy
   m_TagString: Enemy
@@ -459,26 +458,6 @@ MonoBehaviour:
   enemyHp: 0
   enemyBullet: {fileID: 5049743195724932362, guid: 132f9724b84fb2345b601eac0349028b, type: 3}
   enemyGun: {fileID: 4566454432338221675}
-  nextAttackTime: 0
-  attackRate: 0.6
---- !u!114 &4653504295293519962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6298072736730053119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f712c9cfa3418f469a1af981d3a585c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dis: 0
-  player: {fileID: 0}
-  enemyHpImage: {fileID: 1050652311226504492}
-  enemyHp: 0
-  enemyBullet: {fileID: 5049743195724932362, guid: 132f9724b84fb2345b601eac0349028b, type: 3}
-  enemyGun: {fileID: 3948616089303768745}
   nextAttackTime: 0
   attackRate: 0.6
 --- !u!1 &7445358574418955626

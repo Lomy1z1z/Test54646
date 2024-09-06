@@ -20,8 +20,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         enemyHp = enemyHpImage.fillAmount;
-        gm = FindObjectOfType<GameMaster>();
-        playerScript = FindObjectOfType<PlayerM>();
+        
         
     }
 
@@ -31,12 +30,13 @@ public class Enemy : MonoBehaviour
         enemyHpImage.fillAmount = enemyHp;
         //  dis  = Vector3.Distance(transform.position,player.position);
          
-         transform.LookAt(player);
+         transform.LookAt(GameMaster.instance.playerTransform.position);
          
          if(Time.time>=nextAttackTime){
          enemyShooting();
          nextAttackTime=Time.time+1/attackRate;
          }
+         
     }
 
 
@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
         if(enemyHp <= 0)
         {
             Destroy(gameObject);
-            gm.exp += 0.2f;
+            GameMaster.instance.exp += 0.2f;
          }
 
         
@@ -54,9 +54,10 @@ public class Enemy : MonoBehaviour
 
     public void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == Bullet){
-            TakeDamage(playerScript.regulerBulletDamage);
+            TakeDamage(0.4f);
         }
     }
+
 
     private const string Bullet = "Bullet";
 

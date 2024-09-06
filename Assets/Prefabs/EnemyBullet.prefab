@@ -146,4 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dfd47ad90124b04aa0592e3820faf97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBulletSpeed: 700
+  bullet: {fileID: 0}
+  bulletSpeed: 10
+  playerPos: {fileID: 0}
+  tags: []
+  enemyBulletSpeed: 1500

@@ -9,6 +9,7 @@ public class MeleeEnemy : Enemy
 
     [SerializeField] Rigidbody meleeEnemyBody;
     [SerializeField]  float MeleeEnemySpeed;
+    public float knock = 1;
     
 
  
@@ -16,7 +17,7 @@ public class MeleeEnemy : Enemy
     void Start()
     {
         
-            
+            enemyHp = enemyHpImage.fillAmount;
        
     }
 
@@ -24,11 +25,16 @@ public class MeleeEnemy : Enemy
     void Update()
     {
 
+         enemyHpImage.fillAmount = enemyHp;
 
-         if(GameMaster.instance.isPooshed == false){
 
-         transform.position = Vector3.MoveTowards(transform.position,GameMaster.instance.playerTransform.position,MeleeEnemySpeed);
-         }
+         
+       
+
+         
+
+         
+         
 
 
          Debug.Log(GameMaster.instance.isPooshed);
@@ -36,6 +42,21 @@ public class MeleeEnemy : Enemy
          
          
     }
+
+    // public void OnCollisionEnter(Collision other){
+    //     if(other.gameObject.tag == "Bullet"){
+    
+    //     }
+    // }
+    
+     IEnumerator Reset(){
+         yield return new WaitForSeconds(0.5f);
+         GameMaster.instance.isPooshed = false;
+     }
+
+    
+
+    
 
 
    

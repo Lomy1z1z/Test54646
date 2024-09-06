@@ -16,10 +16,13 @@ public class Enemy : MonoBehaviour
     public Transform enemyGun;
      [SerializeField] private float nextAttackTime = 0f;
      [SerializeField] private float attackRate = 1f;
+
+    
     // Start is called before the first frame update
     void Start()
     {
         enemyHp = enemyHpImage.fillAmount;
+        
         
         
     }
@@ -27,6 +30,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         
         enemyHpImage.fillAmount = enemyHp;
         //  dis  = Vector3.Distance(transform.position,player.position);
          
@@ -36,6 +40,8 @@ public class Enemy : MonoBehaviour
          enemyShooting();
          nextAttackTime=Time.time+1/attackRate;
          }
+
+        
          
     }
 
@@ -47,6 +53,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
             GameMaster.instance.exp += 0.2f;
+            GameMaster.instance.killCount++;
          }
 
         

@@ -52,12 +52,19 @@ public class PlayerM : MonoBehaviour
 
         
         // Find all enemy objects in the scene
-        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");  // Replace "Enemy" with the tag you use for the enemy objects
+        // List to store all enemy and melee enemy GameObjects
+        List<GameObject> allEnemies = new List<GameObject>();
+         GameObject[] meleeEnemies = GameObject.FindGameObjectsWithTag("MeleeEnemy");
+        allEnemies.AddRange(meleeEnemies); // Replace "Enemy" with the tag you use for the enemy objects
+
+         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        allEnemies.AddRange(enemies);
+
 
         // Initialize the closest distance as a large value
         float closestDistance = Mathf.Infinity;
 
-        foreach (GameObject obj in enemys)
+        foreach (GameObject obj in allEnemies)
         {
             // Calculate the distance between the current object and the player
             float distanceToPlayer = Vector3.Distance(obj.transform.position, player.position);
@@ -82,7 +89,10 @@ public class PlayerM : MonoBehaviour
             transform.rotation = Quaternion.Euler(0,angle,0);
         }
 
+       
+
         player.velocity = new Vector3(horizontalMove,0,verticalMove);
+        
 
         
 
@@ -103,26 +113,15 @@ public class PlayerM : MonoBehaviour
 
          }
 
-         if(dashTimer > 0.3f){
-            isDashing  = false;
-            dashTimer = 0;
-         }
+        //   if(hp == 0)
+        //   {
+        //       SceneManager.LoadScene(0);
 
-         if(hp == 0)
-         {
-             SceneManager.LoadScene(0);
-
-         }
-
-         if(GameMaster.instance.isPooshed == true){
-            player.AddForce(transform.forward * -500);
-         }
+        //   }
 
 
          
-
-         
-
+           
          
 
         
@@ -145,14 +144,9 @@ public class PlayerM : MonoBehaviour
     }
 
     public void OnCollisionEnter(Collision other){
-        if(other.gameObject.tag == enemyBall  && hp > 0 || other.gameObject.tag == Enemy && hp > 0){
+        if(other.gameObject.tag == enemyBall  && hp > 0 || other.gameObject.tag == Enemy && hp > 0 || other.gameObject.tag == MeleeEnemy && hp > 0 ){
             TakeDamage(10f);
             
-        }
-
-        if(other.gameObject.tag == MeleeEnemy && hp > 0){
-            GameMaster.instance.isPooshed = true;
-
         }
 
        
@@ -164,12 +158,7 @@ public class PlayerM : MonoBehaviour
 
 
 
-    public void Dash(){
-
-        isDashing = true;
-       
-    }
-
+  
 
     
             

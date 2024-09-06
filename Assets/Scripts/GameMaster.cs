@@ -14,6 +14,7 @@ public class GameMaster : MonoBehaviour
     public int level = 1;
     public Transform playerTransform;
     public bool isPooshed = false;
+     public float killCount;
     
 
     private void Awake(){
@@ -31,6 +32,7 @@ public class GameMaster : MonoBehaviour
     void Start()
     {
         level = 1;
+        killCount = 0;
     }
 
     // Update is called once per frame
@@ -44,6 +46,14 @@ public class GameMaster : MonoBehaviour
             LevelUp();
             exp = 0;
         }
+
+       
+          
+        
+
+        
+
+    
         
     }
 
@@ -55,4 +65,6 @@ public class GameMaster : MonoBehaviour
 
 
      }
+
+     
 }

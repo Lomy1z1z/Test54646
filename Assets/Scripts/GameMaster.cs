@@ -13,7 +13,7 @@ public class GameMaster : MonoBehaviour
     public TMP_Text levelText;
     public int level = 1;
     public Transform playerTransform;
-    public bool isPooshed = false;
+    
      public float killCount;
     
 

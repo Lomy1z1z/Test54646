@@ -191,7 +191,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2880246897912385384}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -231,8 +231,9 @@ MonoBehaviour:
   nextAttackTime: 0
   attackRate: 1
   meleeEnemyBody: {fileID: 8633099002706248473}
-  MeleeEnemySpeed: 0.1
-  knock: 1
+  MeleeEnemySpeed: 5
+  knockForce: 0
+  isPooshed: 0
 --- !u!1 &4636362993166431627
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,18 @@ public class MeleeEnemy : Enemy
 
     [SerializeField] Rigidbody meleeEnemyBody;
     [SerializeField]  float MeleeEnemySpeed;
-    public float knock = 1;
+
+    [SerializeField] float knockForce;
+       public bool isPooshed = false;
+
+       private float knockTime = 0.15f;
+
+    
+
+     
+
+
+    
     
 
  
@@ -22,13 +33,33 @@ public class MeleeEnemy : Enemy
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+
+        MeleeEnemySpeed = 400;
+        knockForce = 1000;
 
          enemyHpImage.fillAmount = enemyHp;
 
+         transform.LookAt(GameMaster.instance.playerTransform);
+
+         Vector3 direction = (GameMaster.instance.playerTransform.position - transform.position).normalized;
+
+          if(isPooshed == false){
+
+           meleeEnemyBody.velocity = direction * MeleeEnemySpeed * Time.fixedDeltaTime;
+          }
 
          
+         
+
+
+         if(isPooshed == true){
+                 meleeEnemyBody.AddForce(transform.forward * -knockForce * Time.fixedDeltaTime,ForceMode.Impulse);
+                 StartCoroutine(Reset());
+             }
+
+            
        
 
          
@@ -37,21 +68,25 @@ public class MeleeEnemy : Enemy
          
 
 
-         Debug.Log(GameMaster.instance.isPooshed);
+         
         
          
          
     }
 
-    // public void OnCollisionEnter(Collision other){
-    //     if(other.gameObject.tag == "Bullet"){
-    
-    //     }
-    // }
+       public void OnCollisionEnter(Collision other){
+           if(other.gameObject.tag == "Bullet"){
+              isPooshed = true;
+              TakeDamage(0.4f);
+           }
+           
+
+
+       }
     
      IEnumerator Reset(){
-         yield return new WaitForSeconds(0.5f);
-         GameMaster.instance.isPooshed = false;
+         yield return new WaitForSeconds(knockTime);
+         isPooshed = false;
      }
 
     

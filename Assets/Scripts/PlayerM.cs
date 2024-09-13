@@ -9,7 +9,9 @@ public class PlayerM : MonoBehaviour
     [SerializeField] public Rigidbody player;
     [SerializeField] private Joystick joystick;
     [SerializeField] private float runspeed = 5;
-    [SerializeField] Transform gun;
+    [SerializeField] Transform gun1;
+    [SerializeField] Transform gun2;
+    [SerializeField] Transform gun3;
     [SerializeField] GameObject bullet;
     public Transform target;
     public float regulerBulletDamage = 0.4f;
@@ -20,13 +22,14 @@ public class PlayerM : MonoBehaviour
     public float dashForce = 500;
     public float dashTimer;
     private bool isDashing = false;
+    public bool tripleShot;
     
     
     
 
     
     
-    //public Enemy enemy;
+    
     
     
 
@@ -96,22 +99,17 @@ public class PlayerM : MonoBehaviour
 
         
 
-        if(Time.time>=nextAttackTime && horizontalMove == 0 && verticalMove == 0 && target != null){
+        if(Time.time>=nextAttackTime && horizontalMove == 0 && verticalMove == 0 && target != null &&  tripleShot == false){
         Shooting();
          nextAttackTime=Time.time+1/attackRate;
          }
 
-         if(Input.GetKeyDown(KeyCode.Space) && horizontalMove != 0 && verticalMove != 0){
-            isDashing = true;
+        if(Time.time>=nextAttackTime && horizontalMove == 0 && verticalMove == 0 && target != null && tripleShot == true){
+        tripleShooting();
+         nextAttackTime=Time.time+1/attackRate;
          }
 
-         if(isDashing == true && horizontalMove != 0 && verticalMove != 0){
-
-            dashTimer += Time.deltaTime;
-             
-         player.AddForce(transform.forward * dashForce * Time.deltaTime);
-
-         }
+         
 
         //   if(hp == 0)
         //   {
@@ -130,11 +128,18 @@ public class PlayerM : MonoBehaviour
     public void Shooting(){
         if(target != null){
          transform.LookAt(target);
-        Instantiate(bullet,gun.position,transform.rotation);
+        Instantiate(bullet,gun1.position,transform.rotation);
+        }   
+    }
+
+    public void tripleShooting(){
+        if(target != null){
+         transform.LookAt(target);
+        Instantiate(bullet,gun1.position,transform.rotation);
+        Instantiate(bullet,gun2.position,gun2.transform.rotation);
+        Instantiate(bullet,gun3.position,gun3.transform.rotation);
         
-        }
-        
-         
+        }   
     }
 
     public void TakeDamage(float damage){

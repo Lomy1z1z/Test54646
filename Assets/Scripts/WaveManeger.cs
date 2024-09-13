@@ -8,7 +8,7 @@ public class WaveManeger : MonoBehaviour
 
     [SerializeField]  GameObject enemy;
     [SerializeField] GameObject meleeEnemy;
-    [SerializeField]  List<Transform> Spowns = new List<Transform>();
+    [SerializeField]  List<Transform> Spawns = new List<Transform>();
     [SerializeField] int enemyz;
     bool isWave2;
     bool isWave3;
@@ -43,25 +43,25 @@ public class WaveManeger : MonoBehaviour
     }
 
      public void Wave1(){
-         Instantiate(enemy,Spowns[0].position,transform.rotation);
+         Instantiate(enemy,Spawns[0].position,transform.rotation);
          
      }
      public void Wave2(){
-         Instantiate(enemy,Spowns[0].position,transform.rotation);
-             Instantiate(enemy,Spowns[1].position,transform.rotation);
+         Instantiate(enemy,Spawns[0].position,transform.rotation);
+             Instantiate(enemy,Spawns[1].position,transform.rotation);
 
      }
      public void Wave3(){
-         Instantiate(enemy,Spowns[0].position,transform.rotation);
-             Instantiate(enemy,Spowns[1].position,transform.rotation);
-             Instantiate(meleeEnemy,Spowns[2].position,transform.rotation);
+         Instantiate(enemy,Spawns[0].position,transform.rotation);
+             Instantiate(enemy,Spawns[1].position,transform.rotation);
+             Instantiate(meleeEnemy,Spawns[2].position,transform.rotation);
 
     }
      public void Wave4(){
-         Instantiate(enemy,Spowns[0].position,transform.rotation);
-             Instantiate(enemy,Spowns[1].position,transform.rotation);
-             Instantiate(meleeEnemy,Spowns[2].position,transform.rotation);
-             Instantiate(meleeEnemy,Spowns[3].position,transform.rotation);
+         Instantiate(enemy,Spawns[0].position,transform.rotation);
+             Instantiate(enemy,Spawns[1].position,transform.rotation);
+             Instantiate(meleeEnemy,Spawns[2].position,transform.rotation);
+             Instantiate(meleeEnemy,Spawns[3].position,transform.rotation);
 
      }
 

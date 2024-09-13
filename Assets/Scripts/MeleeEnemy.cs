@@ -11,7 +11,7 @@ public class MeleeEnemy : Enemy
     [SerializeField]  float MeleeEnemySpeed;
 
     [SerializeField] float knockForce;
-       public bool isPooshed = false;
+       public bool isPushed = false;
 
        private float knockTime = 0.15f;
 
@@ -45,16 +45,17 @@ public class MeleeEnemy : Enemy
 
          Vector3 direction = (GameMaster.instance.playerTransform.position - transform.position).normalized;
 
-          if(isPooshed == false){
+          if(isPushed == false){
 
            meleeEnemyBody.velocity = direction * MeleeEnemySpeed * Time.fixedDeltaTime;
           }
+          
 
          
          
 
 
-         if(isPooshed == true){
+         if(isPushed == true){
                  meleeEnemyBody.AddForce(transform.forward * -knockForce * Time.fixedDeltaTime,ForceMode.Impulse);
                  StartCoroutine(Reset());
              }
@@ -76,7 +77,7 @@ public class MeleeEnemy : Enemy
 
        public void OnCollisionEnter(Collision other){
            if(other.gameObject.tag == "Bullet"){
-              isPooshed = true;
+              isPushed = true;
               TakeDamage(0.4f);
            }
            
@@ -86,7 +87,7 @@ public class MeleeEnemy : Enemy
     
      IEnumerator Reset(){
          yield return new WaitForSeconds(knockTime);
-         isPooshed = false;
+         isPushed = false;
      }
 
     

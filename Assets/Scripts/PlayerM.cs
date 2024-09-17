@@ -26,6 +26,7 @@ public class PlayerM : MonoBehaviour
     
     
     
+    
 
     
     
@@ -49,36 +50,47 @@ public class PlayerM : MonoBehaviour
     {
 
         
-       
+      
         
-
+       
 
         
         // Find all enemy objects in the scene
         // List to store all enemy and melee enemy GameObjects
-        List<GameObject> allEnemies = new List<GameObject>();
-         GameObject[] meleeEnemies = GameObject.FindGameObjectsWithTag("MeleeEnemy");
-        allEnemies.AddRange(meleeEnemies); // Replace "Enemy" with the tag you use for the enemy objects
+        //List<GameObject> allEnemies = new List<GameObject>();
+        //  GameObject[] meleeEnemies = GameObject.FindGameObjectsWithTag("MeleeEnemy");
+        // allEnemies.AddRange(meleeEnemies); // Replace "Enemy" with the tag you use for the enemy objects
 
-         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        allEnemies.AddRange(enemies);
+        //  GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        // allEnemies.AddRange(enemies);
 
 
         // Initialize the closest distance as a large value
         float closestDistance = Mathf.Infinity;
 
-        foreach (GameObject obj in allEnemies)
-        {
-            // Calculate the distance between the current object and the player
-            float distanceToPlayer = Vector3.Distance(obj.transform.position, player.position);
+        
+       for (int i = WaveManeger.instance.enemies.Count - 1; i >= 0; i--) 
+{
+    GameObject obj = WaveManeger.instance.enemies[i];
 
-            // Update the target if the current object is closer to the player
-            if (distanceToPlayer < closestDistance)
-            {
-                closestDistance = distanceToPlayer;
-                target = obj.transform;
-            }
-        }
+    
+    if (obj == null)
+    {
+        WaveManeger.instance.enemies.RemoveAt(i);
+        continue;
+    }
+
+    // Calculate the distance between the current object and the player
+    float distanceToPlayer = Vector3.Distance(obj.transform.position, player.position);
+
+    // Update the target if the current object is closer to the player
+    if (distanceToPlayer < closestDistance)
+    {
+        closestDistance = distanceToPlayer;
+        target = obj.transform;
+    }
+     
+}
 
        
         var horizontalMove = joystick.Horizontal * runspeed;

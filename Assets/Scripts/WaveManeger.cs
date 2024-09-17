@@ -6,64 +6,59 @@ public class WaveManeger : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    [SerializeField]  GameObject enemy;
-    [SerializeField] GameObject meleeEnemy;
-    [SerializeField]  List<Transform> Spawns = new List<Transform>();
-    [SerializeField] int enemyz;
-    bool isWave2;
-    bool isWave3;
-    bool isWave4;
+    
+    public List<GameObject> enemies = new List<GameObject>();
+   
+    public static WaveManeger instance; 
+    public List<Wave> wave = new List<Wave>();
+    int currentWave = 0;
+    
+   
+    
+    
+
+
+    
+    private void Awake(){
+        
+
+        if(instance != null && instance != this){
+            Destroy(this);
+        }else{
+            DontDestroyOnLoad(this);
+            instance = this;
+        }
+    }
  
     void Start()
     {
-          Invoke("Wave1",2);
         
+     
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-         int enemys = GameObject.FindGameObjectsWithTag("Enemy").Length;
-         
-        
-        if(GameMaster.instance.killCount == 1 && isWave2 == false){
-            isWave2 = true;
-            Invoke("Wave2",2f);
+        if(enemies.Count == 0){
+            Level1();
+            currentWave ++;
         }
-        if(GameMaster.instance.killCount == 3 && isWave3 == false){
-             isWave3 = true;
-            Invoke("Wave3",2f);
-        }
-        if(GameMaster.instance.killCount == 6  && isWave4 == false){
-          isWave4 = true;
-            Invoke("Wave4",2f);
-        }
-        
     }
 
-     public void Wave1(){
-         Instantiate(enemy,Spawns[0].position,transform.rotation);
-         
-     }
-     public void Wave2(){
-         Instantiate(enemy,Spawns[0].position,transform.rotation);
-             Instantiate(enemy,Spawns[1].position,transform.rotation);
 
+     public void Level1(){
+       
+            for(int i = 0; i < wave[currentWave].EnemiesToSpawn.Count; i++){
+             enemies.Add(Instantiate(wave[currentWave].EnemiesToSpawn[i],wave[currentWave].SpawnPoints[i].position,transform.rotation));
+            }
+            
+            
+            
+        
      }
-     public void Wave3(){
-         Instantiate(enemy,Spawns[0].position,transform.rotation);
-             Instantiate(enemy,Spawns[1].position,transform.rotation);
-             Instantiate(meleeEnemy,Spawns[2].position,transform.rotation);
 
-    }
-     public void Wave4(){
-         Instantiate(enemy,Spawns[0].position,transform.rotation);
-             Instantiate(enemy,Spawns[1].position,transform.rotation);
-             Instantiate(meleeEnemy,Spawns[2].position,transform.rotation);
-             Instantiate(meleeEnemy,Spawns[3].position,transform.rotation);
-
-     }
 
      
     

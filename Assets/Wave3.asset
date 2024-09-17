@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3481d42684ed0254aa16d3cbf7b26574, type: 3}
+  m_Name: Wave3
+  m_EditorClassIdentifier: 
+  SpawnPoints:
+  - {fileID: 2770028222734878113, guid: afceb6389177a1a47b4a8fbd09960744, type: 3}
+  - {fileID: 4170358341402848696, guid: 2e68971f50a6c2540b877dc051f7b65a, type: 3}
+  - {fileID: 627844805794958723, guid: efd373fa2b57d844bb46469cbc64a573, type: 3}
+  - {fileID: 7338715203180622743, guid: 0f8e00af0608cd84baac6eafa10e68ff, type: 3}
+  EnemiesToSpawn:
+  - {fileID: 2880246897912385384, guid: bd5b24bb43cfc2a42940d178d4b89827, type: 3}
+  - {fileID: 2880246897912385384, guid: bd5b24bb43cfc2a42940d178d4b89827, type: 3}
+  - {fileID: 6298072736730053119, guid: 692cc4cb95d45414c8b5b96c1f6eaba6, type: 3}
+  - {fileID: 6298072736730053119, guid: 692cc4cb95d45414c8b5b96c1f6eaba6, type: 3}
+  IsCompleted: 1

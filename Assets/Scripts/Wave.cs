@@ -8,5 +8,5 @@ public class Wave : ScriptableObject
     
         public List<Transform> SpawnPoints;
 		public List<GameObject> EnemiesToSpawn;
-		public bool IsCompleted;
+		
 }

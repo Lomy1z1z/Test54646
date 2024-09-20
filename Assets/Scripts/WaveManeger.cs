@@ -42,22 +42,30 @@ public class WaveManeger : MonoBehaviour
     {
 
         if(enemies.Count == 0){
-            Level1();
-            currentWave ++;
+              WaveSystem();
+              currentWave ++;
         }
     }
 
 
-     public void Level1(){
+     public void WaveSystem(){
        
             for(int i = 0; i < wave[currentWave].EnemiesToSpawn.Count; i++){
              enemies.Add(Instantiate(wave[currentWave].EnemiesToSpawn[i],wave[currentWave].SpawnPoints[i].position,transform.rotation));
             }
             
-            
-            
         
      }
+
+      IEnumerator waveDelay(float waitTime){
+
+       
+            yield return new WaitForSeconds(waitTime);
+            currentWave ++;
+
+    
+        
+      }
 
 
      

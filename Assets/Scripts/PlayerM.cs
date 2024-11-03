@@ -8,21 +8,35 @@ public class PlayerM : MonoBehaviour
 {
     [SerializeField] public Rigidbody player;
     [SerializeField] private Joystick joystick;
-    [SerializeField] private float runspeed = 5;
+    [SerializeField] public float runspeed = 5;
     [SerializeField] Transform gun1;
     [SerializeField] Transform gun2;
     [SerializeField] Transform gun3;
-    [SerializeField] GameObject bullet;
+    [SerializeField] public GameObject bullet;
     public Transform target;
     public float regulerBulletDamage = 0.4f;
     public float turnSmoothTime = 0.1f;
     public float turnSmoothVelocity;
      public float hp = 100;
     public Image hpImage;
+    public Image hpImageBackground;
     public float dashForce = 500;
     public float dashTimer;
     private bool isDashing = false;
     public bool tripleShot;
+
+    public Material invisble;
+
+    public bool isHittble = true;
+
+     public float enemyDamege = 1.5f;
+    public static PlayerM instance; 
+
+    public GameObject fireBullet;
+
+
+
+   
     
     
     
@@ -35,13 +49,18 @@ public class PlayerM : MonoBehaviour
     
 
      [SerializeField] private float nextAttackTime = 0f;
-     [SerializeField] private float attackRate = 1f;
+     [SerializeField] public float attackRate = 1f;
+
+
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
         
-        
+        invisble.SetColor("_Color", Color.blue);
+        instance = this;
 
     }
 
@@ -50,37 +69,18 @@ public class PlayerM : MonoBehaviour
     {
 
         
-      
-        
+
+
+         float closestDistance = Mathf.Infinity;
+
        
+        for (int i = WaveManeger.instance.enemies.Count - 1; i >= 0; i--){
+             Enemy obj = WaveManeger.instance.enemies[i];
 
         
-        // Find all enemy objects in the scene
-        // List to store all enemy and melee enemy GameObjects
-        //List<GameObject> allEnemies = new List<GameObject>();
-        //  GameObject[] meleeEnemies = GameObject.FindGameObjectsWithTag("MeleeEnemy");
-        // allEnemies.AddRange(meleeEnemies); // Replace "Enemy" with the tag you use for the enemy objects
-
-        //  GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        // allEnemies.AddRange(enemies);
-
-
         // Initialize the closest distance as a large value
-        float closestDistance = Mathf.Infinity;
-
-        
-       for (int i = WaveManeger.instance.enemies.Count - 1; i >= 0; i--) 
-{
-    GameObject obj = WaveManeger.instance.enemies[i];
-
-    
-    if (obj == null)
-    {
-        WaveManeger.instance.enemies.RemoveAt(i);
-        continue;
-    }
-
-    // Calculate the distance between the current object and the player
+       
+          // Calculate the distance between the current object and the player
     float distanceToPlayer = Vector3.Distance(obj.transform.position, player.position);
 
     // Update the target if the current object is closer to the player
@@ -89,10 +89,9 @@ public class PlayerM : MonoBehaviour
         closestDistance = distanceToPlayer;
         target = obj.transform;
     }
-     
-}
+    }
 
-       
+    
         var horizontalMove = joystick.Horizontal * runspeed;
         var verticalMove = joystick.Vertical * runspeed;
 
@@ -109,7 +108,6 @@ public class PlayerM : MonoBehaviour
         player.velocity = new Vector3(horizontalMove,0,verticalMove);
         
 
-        
 
         if(Time.time>=nextAttackTime && horizontalMove == 0 && verticalMove == 0 && target != null &&  tripleShot == false){
         Shooting();
@@ -120,19 +118,6 @@ public class PlayerM : MonoBehaviour
         tripleShooting();
          nextAttackTime=Time.time+1/attackRate;
          }
-
-         
-
-        //   if(hp == 0)
-        //   {
-        //       SceneManager.LoadScene(0);
-
-        //   }
-
-
-         
-           
-         
 
         
     }
@@ -157,12 +142,34 @@ public class PlayerM : MonoBehaviour
     public void TakeDamage(float damage){
         hp -= damage;
          hpImage.fillAmount = hp/100;
-        
+         invisble.SetColor("_Color", Color.white);
+         isHittble = false;
+          if(hp <= 0){
+              Time.timeScale = 0;
+             WaveManeger.instance.menuImg.SetActive(true);
+              WaveManeger.instance.finish = true;
+
+          }
     }
 
-    public void OnCollisionEnter(Collision other){
-        if(other.gameObject.tag == enemyBall  && hp > 0 || other.gameObject.tag == Enemy && hp > 0 || other.gameObject.tag == MeleeEnemy && hp > 0 ){
+    public void OnTriggerEnter(Collider other){
+        if(other.gameObject.tag == enemyBall  && hp > 0  && isHittble || other.gameObject.tag == Enemy && hp > 0  && isHittble || other.gameObject.tag == MeleeEnemy && hp > 0  && isHittble){
             TakeDamage(10f);
+            StartCoroutine(ResetHit());
+            
+            
+             
+            
+        }
+
+       
+    }
+
+
+    public void OnCollisionEnter(Collision other){
+        if(other.gameObject.tag == Enemy && hp > 0   && isHittble || other.gameObject.tag == MeleeEnemy && hp > 0  && isHittble){
+            TakeDamage(10f);
+            StartCoroutine(ResetHit());
             
         }
 
@@ -173,7 +180,12 @@ public class PlayerM : MonoBehaviour
     private const string Enemy = "Enemy";
     private const string MeleeEnemy = "MeleeEnemy";
 
-
+ IEnumerator ResetHit(){
+         yield return new WaitForSeconds(0.5f);
+          invisble.SetColor("_Color", Color.blue);
+          isHittble = true;
+         
+     }
 
   
 

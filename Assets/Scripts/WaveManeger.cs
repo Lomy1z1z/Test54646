@@ -1,20 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using System;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class WaveManeger : MonoBehaviour
 {
     // Start is called before the first frame update
-
     
-    public List<GameObject> enemies = new List<GameObject>();
+    public List<Enemy> enemies = new List<Enemy>();
    
     public static WaveManeger instance; 
-    public List<Wave> wave = new List<Wave>();
+    public GameObject menuImg;
     int currentWave = 0;
+    public Wave wave;
+    public int enemiesRemaning = 0;
+    public TMP_Text enemytext;
+
+    public Data data;
+
+    public bool finish;
+
+    
+     
     
    
-    
+   
     
 
 
@@ -32,8 +46,10 @@ public class WaveManeger : MonoBehaviour
  
     void Start()
     {
-        
-     
+
+       
+
+     StartCoroutine(WaveDelay());
 
     }
 
@@ -41,33 +57,93 @@ public class WaveManeger : MonoBehaviour
     void Update()
     {
 
-        if(enemies.Count == 0){
-              WaveSystem();
-              currentWave ++;
-        }
+
+   
+       
+
+
+
     }
 
 
-     public void WaveSystem(){
-       
-            for(int i = 0; i < wave[currentWave].EnemiesToSpawn.Count; i++){
-             enemies.Add(Instantiate(wave[currentWave].EnemiesToSpawn[i],wave[currentWave].SpawnPoints[i].position,transform.rotation));
-            }
-            
+
+
+    public void WaveSystem(){
         
+        for(int i = 0; enemies.Count < wave.waves[currentWave].EnemiesToSpawn.Count &&  wave.waves[currentWave].IsCompleted == false; i ++ ){
+            var enemySpawn = Instantiate(wave.waves[currentWave].EnemiesToSpawn[i],wave.waves[i].SpawnPoints[i].position,transform.rotation);
+            enemySpawn.OnDeath = OnEnemyDeath;
+            enemies.Add(enemySpawn);
+            enemiesRemaning = enemies.Count;
+            enemytext.text = enemiesRemaning.ToString();
+
+
+        }
+
+    }
+
+    public void OnEnemyDeath(Enemy enemy){
+        enemies.Remove(enemy);
+        enemiesRemaning = enemies.Count;
+        enemytext.text = enemiesRemaning.ToString();
+        if (enemies.Count == 0){
+            wave.waves[currentWave].IsCompleted = true;
+            currentWave++;
+            if(wave.waves.Count > currentWave){
+
+              StartCoroutine(WaveDelay());
+
+            }
+            else{
+                 Time.timeScale = 0;
+                menuImg.SetActive(true);
+                finish = true;
+                
+                   
+            }
+        }
+
+    }
+
+    IEnumerator WaveDelay(){
+         yield return new WaitForSeconds(2);
+         WaveSystem();
+         
      }
 
-      IEnumerator waveDelay(float waitTime){
+     
 
-       
-            yield return new WaitForSeconds(waitTime);
-            currentWave ++;
+
+   
+
 
     
-        
-      }
+
+
+   }
+   
+
+
+    
+
+   
+
+
+
+    
+
+    
+      
+
+    
+
+
+
+   
+
+     
 
 
      
     
-}
+

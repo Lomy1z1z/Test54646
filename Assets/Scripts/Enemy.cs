@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 
 public class Enemy : MonoBehaviour
@@ -17,11 +18,18 @@ public class Enemy : MonoBehaviour
      [SerializeField] private float nextAttackTime = 0f;
      [SerializeField] private float attackRate = 1f;
 
+     public float enemyDamege = 0.2f;
+
+     
+
+     public Action<Enemy> OnDeath;
+
     
     // Start is called before the first frame update
     void Start()
     {
         enemyHp = enemyHpImage.fillAmount;
+       
         
         
         
@@ -41,6 +49,8 @@ public class Enemy : MonoBehaviour
          nextAttackTime=Time.time+1/attackRate;
          }
 
+         
+
         
          
     }
@@ -52,16 +62,22 @@ public class Enemy : MonoBehaviour
         if(enemyHp <= 0)
         {
             Destroy(gameObject);
-            GameMaster.instance.exp += 0.2f;
-            GameMaster.instance.killCount++;
+            GameMaster.instance.exp += 1f;
          }
 
         
     }
 
+   public void OnDestroy(){
+    OnDeath?.Invoke(this);
+ 
+   
+   }
+    
+
     public void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == Bullet){
-            TakeDamage(0.4f);
+            TakeDamage(PlayerM.instance.enemyDamege);
         }
     }
 
@@ -73,4 +89,15 @@ public class Enemy : MonoBehaviour
         Instantiate(enemyBullet,enemyGun.position,transform.rotation);
 
     }
+
+    
+   
+
+        
+
+
+        
+
+        
+
 }

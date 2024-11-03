@@ -2,15 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Bullet : MonoBehaviour
 {
     [SerializeField] Rigidbody bullet;
     public float bulletSpeed = 10;
     public Transform playerPos;
     public List<string>  tags;
+
+    //public ParticleSystem fire;
+    public static Bullet instance; 
     // Start is called before the first frame update
     void Start()
     {
+
+        //fire.Stop();
+        instance = this;
 
         
     }

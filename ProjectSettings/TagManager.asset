@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - enemyBall
   - MeleeEnemy
+  - BallSkill
+  - ShildSkill
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - enemyBall
   - Player
   - MeleeEnemy
-  - 
-  - 
+  - BallSkill
+  - ShildSkill
   - 
   - 
   - 

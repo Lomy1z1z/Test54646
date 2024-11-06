@@ -20,7 +20,6 @@ public class WaveManeger : MonoBehaviour
     public int enemiesRemaning = 0;
     public TMP_Text enemytext;
 
-    public Data data;
 
     public bool finish;
 
@@ -71,7 +70,7 @@ public class WaveManeger : MonoBehaviour
     public void WaveSystem(){
         
         for(int i = 0; enemies.Count < wave.waves[currentWave].EnemiesToSpawn.Count &&  wave.waves[currentWave].IsCompleted == false; i ++ ){
-            var enemySpawn = Instantiate(wave.waves[currentWave].EnemiesToSpawn[i],wave.waves[i].SpawnPoints[i].position,transform.rotation);
+            var enemySpawn = Instantiate(wave.waves[currentWave].EnemiesToSpawn[i],wave.waves[currentWave].SpawnPoints[i].position,transform.rotation);
             enemySpawn.OnDeath = OnEnemyDeath;
             enemies.Add(enemySpawn);
             enemiesRemaning = enemies.Count;

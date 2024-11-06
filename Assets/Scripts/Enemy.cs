@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-
+using TMPro;
 
 public class Enemy : MonoBehaviour
 {
@@ -18,7 +18,15 @@ public class Enemy : MonoBehaviour
      [SerializeField] private float nextAttackTime = 0f;
      [SerializeField] private float attackRate = 1f;
 
-     public float enemyDamege = 0.2f;
+     public GameObject dmgText;
+
+     public float ballDamagePrint = 1;
+
+     
+
+    
+
+     
 
      
 
@@ -29,6 +37,17 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         enemyHp = enemyHpImage.fillAmount;
+
+        
+
+        
+
+        
+
+        GameMaster.instance.damageToPrint = PlayerM.instance.enemyDamege;
+
+        GameMaster.instance.damageText.text =  GameMaster.instance.damageToPrint.ToString();
+         
        
         
         
@@ -49,8 +68,16 @@ public class Enemy : MonoBehaviour
          nextAttackTime=Time.time+1/attackRate;
          }
 
+
          
 
+         
+
+
+
+         
+
+          
         
          
     }
@@ -58,7 +85,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage){
         enemyHp -= damage;
-
+        Instantiate(dmgText,transform.position,dmgText.transform.rotation);
         if(enemyHp <= 0)
         {
             Destroy(gameObject);
@@ -77,12 +104,25 @@ public class Enemy : MonoBehaviour
 
     public void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == Bullet){
-            TakeDamage(PlayerM.instance.enemyDamege);
+            TakeDamage(PlayerM.instance.enemyDamege/50);
+            Debug.Log(PlayerM.instance.enemyDamege);
+
         }
+         
+    }
+
+    public void OnTriggerEnter(Collider other){
+
+        if(other.gameObject.tag == BallSkill){
+            GameMaster.instance.damageText.text = ballDamagePrint.ToString();
+            TakeDamage(0.2f);
+        }
+
     }
 
 
     private const string Bullet = "Bullet";
+    private const string BallSkill = "BallSkill";
 
 
     public void enemyShooting(){

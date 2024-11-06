@@ -243,6 +243,8 @@ MonoBehaviour:
   enemyGun: {fileID: 0}
   nextAttackTime: 0
   attackRate: 1
+  dmgText: {fileID: 3682504917167634440, guid: 4be2c277bf65f0b43b624c03825002f6, type: 3}
+  ballDamagePrint: 2
   meleeEnemyBody: {fileID: 8633099002706248473}
   MeleeEnemySpeed: 5
   knockForce: 0

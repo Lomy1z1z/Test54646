@@ -21,6 +21,26 @@ public class GameMaster : MonoBehaviour
     
     public Camera cam;
 
+    public TMP_Text textSP;
+
+
+    public float damageToPrint;
+
+     public TMP_Text damageText;
+
+     
+
+
+     
+
+    
+
+    
+
+
+
+   
+
     
     
 
@@ -42,7 +62,6 @@ public class GameMaster : MonoBehaviour
     void Start()
     {
 
-        
 
         Time.timeScale = 1;
         
@@ -55,6 +74,7 @@ public class GameMaster : MonoBehaviour
         expImage.fillAmount = exp;
 
         levelText.text = level.ToString();
+        textSP.text = skillPoints.ToString();
 
         if(exp >= 1){
             LevelUp();
@@ -65,7 +85,13 @@ public class GameMaster : MonoBehaviour
 
         
 
+       
+
+         
+
     }
+
+     
 
 
     public void DestroyThyself()
@@ -85,8 +111,7 @@ public class GameMaster : MonoBehaviour
          skillPick.SetActive(true);
           Time.timeScale = 0;
           skillPoints +=1;
-
-
+          
 
      }
 
@@ -112,7 +137,17 @@ public class GameMaster : MonoBehaviour
          }
         
      }
+     
+     public void ExitTab(GameObject window){
 
+        window.SetActive(false);
+
+     }
+
+      
+
+
+    
 
 
 

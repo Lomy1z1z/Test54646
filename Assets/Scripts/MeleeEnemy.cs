@@ -78,7 +78,7 @@ public class MeleeEnemy : Enemy
        public void OnCollisionEnter(Collision other){
            if(other.gameObject.tag == "Bullet"){
               isPushed = true;
-              TakeDamage(0.4f);
+              TakeDamage(PlayerM.instance.enemyDamege/50);
            }
            
 

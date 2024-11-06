@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class PlayerM : MonoBehaviour
 {
@@ -34,6 +35,19 @@ public class PlayerM : MonoBehaviour
 
     public GameObject fireBullet;
 
+    public Transform cam;
+
+     public CinemachineFreeLook camera;
+     public float flipRunSpeed;
+
+     public Animator animator;
+
+     public float minDamage = 1;
+
+     public float maxDamage = 10;
+
+     
+
 
 
    
@@ -58,9 +72,12 @@ public class PlayerM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        
         
         invisble.SetColor("_Color", Color.blue);
         instance = this;
+        RandomEnemyDamage();
 
     }
 
@@ -92,13 +109,16 @@ public class PlayerM : MonoBehaviour
     }
 
     
-        var horizontalMove = joystick.Horizontal * runspeed;
-        var verticalMove = joystick.Vertical * runspeed;
+         var horizontalMove = joystick.Horizontal * runspeed;
+         var verticalMove = joystick.Vertical * runspeed;
+
+         
+         
 
         Vector3 diraction = new Vector3(horizontalMove,0f,verticalMove).normalized;
 
         if(diraction.magnitude >=0.1f){
-            float targetAngle =Mathf.Atan2(diraction.x,diraction.z) * Mathf.Rad2Deg;
+            float targetAngle =Mathf.Atan2(diraction.x,diraction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y,targetAngle, ref turnSmoothVelocity,turnSmoothTime);
             transform.rotation = Quaternion.Euler(0,angle,0);
         }
@@ -106,6 +126,18 @@ public class PlayerM : MonoBehaviour
        
 
         player.velocity = new Vector3(horizontalMove,0,verticalMove);
+
+        if(horizontalMove !=0 || verticalMove!= 0){
+            animator.SetBool("Run",true);
+            animator.SetBool("Shooting",false);
+        }else{
+            animator.SetBool("Run",false);
+        }
+
+
+        if(target == null){
+            animator.SetBool("Shooting",false);
+        }
         
 
 
@@ -113,6 +145,8 @@ public class PlayerM : MonoBehaviour
         Shooting();
          nextAttackTime=Time.time+1/attackRate;
          }
+
+        
 
         if(Time.time>=nextAttackTime && horizontalMove == 0 && verticalMove == 0 && target != null && tripleShot == true){
         tripleShooting();
@@ -123,14 +157,23 @@ public class PlayerM : MonoBehaviour
     }
 
     public void Shooting(){
+        RandomEnemyDamage();
+        GameMaster.instance.damageToPrint = Mathf.RoundToInt(enemyDamege);
+        GameMaster.instance.damageText.text =  GameMaster.instance.damageToPrint.ToString();
         if(target != null){
+        animator.SetBool("Shooting",true);
          transform.LookAt(target);
         Instantiate(bullet,gun1.position,transform.rotation);
         }   
     }
+   
 
     public void tripleShooting(){
+         RandomEnemyDamage();
+        GameMaster.instance.damageToPrint = Mathf.RoundToInt(enemyDamege);
+        GameMaster.instance.damageText.text =  GameMaster.instance.damageToPrint.ToString();
         if(target != null){
+        animator.SetBool("Shooting",true);
          transform.LookAt(target);
         Instantiate(bullet,gun1.position,transform.rotation);
         Instantiate(bullet,gun2.position,gun2.transform.rotation);
@@ -144,6 +187,7 @@ public class PlayerM : MonoBehaviour
          hpImage.fillAmount = hp/100;
          invisble.SetColor("_Color", Color.white);
          isHittble = false;
+        
           if(hp <= 0){
               Time.timeScale = 0;
              WaveManeger.instance.menuImg.SetActive(true);
@@ -189,10 +233,27 @@ public class PlayerM : MonoBehaviour
 
   
 
-    
+    public void FlipSide(){
+        
+        camera.m_XAxis.Value = 180;
+
+        
+        
+    }
+
+     public void RandomEnemyDamage(){
+
+        enemyDamege = Random.Range(minDamage,maxDamage);
+
+        
+    }
             
         
     }
+
+   
+
+    
     
 
    

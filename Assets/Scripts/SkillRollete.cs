@@ -10,6 +10,29 @@ public class SkillRollete : MonoBehaviour
 
     public GameObject fireBulletPick;
     public GameObject TripleShotPick;
+
+    public GameObject ballSkillPick;
+    public GameObject shildSkillPick;
+
+    public GameObject ballSkill;
+
+    public GameObject shildSkill;
+
+    public GameObject rollAlert;
+
+    public GameObject continueAlert;
+
+    public bool isFireBall;
+    public bool isTripleShot;
+    public bool isBallSkill;
+
+    public bool isShildSkill;
+    public float shootAnim = 1.5f;
+     
+
+    
+
+    
     
     // Start is called before the first frame update
     void Start()
@@ -20,7 +43,7 @@ public class SkillRollete : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(skills.Length);
+       
     }
 
 public void PlayRollete(){
@@ -32,8 +55,10 @@ public void PlayRollete(){
 {
   case 0:
     CurrentSkill = skills[0];
-     PlayerM.instance.enemyDamege += 0.21f;
-
+     PlayerM.instance.minDamage += 3;
+     PlayerM.instance.maxDamage += 3;
+     GameMaster.instance.damageToPrint = PlayerM.instance.enemyDamege * 10;
+     GameMaster.instance.damageText.text = GameMaster.instance.damageToPrint.ToString();
     break;
   case 1:
     CurrentSkill = skills[1];
@@ -49,6 +74,8 @@ public void PlayRollete(){
   case 3:
    CurrentSkill = skills[3];
    PlayerM.instance.attackRate +=1;
+   shootAnim += 0.5f;
+   PlayerM.instance.animator.SetFloat("shootSpeed",shootAnim);
     break;
 
 }
@@ -62,6 +89,9 @@ public void PlayRollete(){
     CurrentSkill.SetActive(true);
 
  
+    }else{
+        rollAlert.SetActive(true);
+
     }
     
     
@@ -77,26 +107,52 @@ public void Continue(){
         isRolled = false;
          Time.timeScale = 1;
          gameObject.SetActive(false);
+    }else{
+
+        continueAlert.SetActive(true);
+
     }
 }
 
-
+// Choiceble Skills:
 public void FrieBulletSkill(){
-    if(GameMaster.instance.skillPoints > 0){
+    if(GameMaster.instance.skillPoints > 0 && isFireBall == false){
     fireBulletPick.SetActive(true);
     PlayerM.instance.bullet = PlayerM.instance.fireBullet;
     GameMaster.instance.skillPoints -=1;
-
+    isFireBall = true;
     }
 
 }
 public void TripleShotActive(){
-    if(GameMaster.instance.skillPoints > 0){
+    if(GameMaster.instance.skillPoints > 0 && isTripleShot == false){
     TripleShotPick.SetActive(true);
     PlayerM.instance.tripleShot = true;
     GameMaster.instance.skillPoints -=1;
-
+    isTripleShot = true;
     }
 
 }
+public void BallSkillActive(){
+    if(GameMaster.instance.skillPoints > 0 && isBallSkill == false){
+    ballSkillPick.SetActive(true);
+    ballSkill.SetActive(true);
+    GameMaster.instance.skillPoints -=1;
+    isBallSkill = true;
+    }
+
+}
+public void ShildSkillActive(){
+    if(GameMaster.instance.skillPoints > 0 && isShildSkill == false){
+    shildSkillPick.SetActive(true);
+    shildSkill.SetActive(true);
+    GameMaster.instance.skillPoints -=1;
+    isShildSkill = true;
+    }
+
+    
+
+}
+
+
 }

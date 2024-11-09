@@ -28,6 +28,18 @@ public class GameMaster : MonoBehaviour
 
      public TMP_Text damageText;
 
+     public float sparkleExpAmount = 0.35f;
+
+     public Transform bombTransform;
+
+     public Data data;
+
+     public GameObject ballSkill;
+
+    public GameObject shildSkill;
+
+     
+
      
 
 
@@ -64,8 +76,9 @@ public class GameMaster : MonoBehaviour
 
 
         Time.timeScale = 1;
-        
-        level = 1;
+
+        level = data.levelData;
+       
     }
 
     // Update is called once per frame
@@ -78,8 +91,10 @@ public class GameMaster : MonoBehaviour
 
         if(exp >= 1){
             LevelUp();
-            exp = 0;
+             data.levelData = level; 
         }
+
+       
 
         
 
@@ -111,11 +126,29 @@ public class GameMaster : MonoBehaviour
          skillPick.SetActive(true);
           Time.timeScale = 0;
           skillPoints +=1;
+          exp = 0;
+          sparkleExpAmount -= 0.05f;
           
 
      }
 
      public void RestartLevel(){
+         data.levelData = 1;
+
+    data.minDamagedata = 1;
+    data.maxDamagedata = 10;
+
+    data.hpImageDeta =  0.3f;
+    data.hpBackGroundImageDeta =  0.3f;
+    data.hpData = 30f;
+
+    data.runSpeedData = 25f;
+
+   data.attackRateData = 0.1f;
+   data.shildSkillData = false;
+   data.ballSkillData = false;
+   data.tripleShootData = false;
+   data.bulletTypeData = PlayerM.instance.regulerBullet;
         SceneManager.LoadScene(1);
          DestroyThyself();
      }
@@ -125,6 +158,22 @@ public class GameMaster : MonoBehaviour
         WaveManeger.instance.menuImg.SetActive(true);
      }
      public void ReturnToLobby(){
+         data.levelData = 1;
+
+    data.minDamagedata = 1;
+    data.maxDamagedata = 10;
+
+    data.hpImageDeta =  0.3f;
+    data.hpBackGroundImageDeta =  0.3f;
+    data.hpData = 30f;
+
+    data.runSpeedData = 25f;
+
+   data.attackRateData = 0.1f;
+   data.shildSkillData = false;
+   data.ballSkillData = false;
+   data.tripleShootData = false;
+   data.bulletTypeData = PlayerM.instance.regulerBullet;
         SceneManager.LoadScene(0);
         DestroyThyself();
         
@@ -143,6 +192,9 @@ public class GameMaster : MonoBehaviour
         window.SetActive(false);
 
      }
+
+
+    
 
       
 

@@ -38,13 +38,16 @@ public class PlayerM : MonoBehaviour
     public Transform cam;
 
      public CinemachineFreeLook camera;
-     public float flipRunSpeed;
 
      public Animator animator;
 
      public float minDamage = 1;
 
      public float maxDamage = 10;
+
+     public GameObject regulerBullet;
+
+     
 
      
 
@@ -98,6 +101,7 @@ public class PlayerM : MonoBehaviour
         // Initialize the closest distance as a large value
        
           // Calculate the distance between the current object and the player
+          
     float distanceToPlayer = Vector3.Distance(obj.transform.position, player.position);
 
     // Update the target if the current object is closer to the player
@@ -200,10 +204,11 @@ public class PlayerM : MonoBehaviour
         if(other.gameObject.tag == enemyBall  && hp > 0  && isHittble || other.gameObject.tag == Enemy && hp > 0  && isHittble || other.gameObject.tag == MeleeEnemy && hp > 0  && isHittble){
             TakeDamage(10f);
             StartCoroutine(ResetHit());
-            
-            
-             
-            
+        }
+
+        if(other.gameObject.tag == "exp" && WaveManeger.instance.enemiesRemaning == 0){
+            Destroy(other.gameObject);
+            GameMaster.instance.exp += GameMaster.instance.sparkleExpAmount;
         }
 
        
@@ -233,13 +238,7 @@ public class PlayerM : MonoBehaviour
 
   
 
-    public void FlipSide(){
-        
-        camera.m_XAxis.Value = 180;
-
-        
-        
-    }
+    
 
      public void RandomEnemyDamage(){
 

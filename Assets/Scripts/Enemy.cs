@@ -15,12 +15,21 @@ public class Enemy : MonoBehaviour
     GameMaster gm;
     public GameObject enemyBullet;
     public Transform enemyGun;
-     [SerializeField] private float nextAttackTime = 0f;
-     [SerializeField] private float attackRate = 1f;
+     [SerializeField] public float nextAttackTime = 0f;
+     [SerializeField] public float attackRate = 1f;
 
      public GameObject dmgText;
 
      public float ballDamagePrint = 1;
+     public float fireDamagePrint = 1;
+     public GameObject expSparkle;
+
+     public bool isOnFire;
+
+     public ParticleSystem fire;
+
+    public int burnChance;
+     
 
      
 
@@ -68,6 +77,8 @@ public class Enemy : MonoBehaviour
          nextAttackTime=Time.time+1/attackRate;
          }
 
+        
+
 
          
 
@@ -89,7 +100,7 @@ public class Enemy : MonoBehaviour
         if(enemyHp <= 0)
         {
             Destroy(gameObject);
-            GameMaster.instance.exp += 1f;
+            //GameMaster.instance.exp += 1f;
          }
 
         
@@ -97,16 +108,25 @@ public class Enemy : MonoBehaviour
 
    public void OnDestroy(){
     OnDeath?.Invoke(this);
- 
-   
+     Instantiate(expSparkle,transform.position,expSparkle.transform.rotation);
+      
    }
     
 
     public void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == Bullet){
             TakeDamage(PlayerM.instance.enemyDamege/50);
-            Debug.Log(PlayerM.instance.enemyDamege);
+        }
 
+        if(other.gameObject.tag == FireBullet){
+             TakeDamage(PlayerM.instance.enemyDamege/50);
+              burnChance = UnityEngine.Random.Range(0,101);
+              if(burnChance > 70 && !isOnFire){
+            isOnFire = true;
+            fire.Play();
+            StartCoroutine(FireDamage());
+            StartCoroutine(StopFire());
+              }
         }
          
     }
@@ -122,6 +142,7 @@ public class Enemy : MonoBehaviour
 
 
     private const string Bullet = "Bullet";
+    public const string FireBullet = "FireBullet";
     private const string BallSkill = "BallSkill";
 
 
@@ -129,6 +150,22 @@ public class Enemy : MonoBehaviour
         Instantiate(enemyBullet,enemyGun.position,transform.rotation);
 
     }
+
+    public IEnumerator FireDamage(){
+         while(isOnFire){
+        GameMaster.instance.damageText.text = fireDamagePrint.ToString();
+        TakeDamage(0.05f);
+         yield return new WaitForSeconds(1f);
+         }
+     }
+    public IEnumerator StopFire(){
+        if(isOnFire){
+    yield return new WaitForSeconds(6f);
+    fire.Stop();
+    isOnFire = false;
+        }
+         
+     }
 
     
    

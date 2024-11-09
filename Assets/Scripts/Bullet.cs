@@ -16,8 +16,9 @@ public class Bullet : MonoBehaviour
     void Start()
     {
 
-        //fire.Stop();
+        
         instance = this;
+        Destroy(gameObject,1f);
 
         
     }

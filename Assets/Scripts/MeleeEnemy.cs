@@ -80,6 +80,18 @@ public class MeleeEnemy : Enemy
               isPushed = true;
               TakeDamage(PlayerM.instance.enemyDamege/50);
            }
+
+            if(other.gameObject.tag == "FireBullet"){
+             isPushed = true;
+             TakeDamage(PlayerM.instance.enemyDamege/50);
+              burnChance = UnityEngine.Random.Range(0,101);
+              if(burnChance > 70 && !isOnFire){
+            isOnFire = true;
+            fire.Play();
+            StartCoroutine(FireDamage());
+            StartCoroutine(StopFire());
+              }
+        }
            
 
 

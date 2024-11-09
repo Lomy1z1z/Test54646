@@ -152,4 +152,4 @@ MonoBehaviour:
   tags:
   - Enemy
   - MeleeEnemy
-  fire: {fileID: 0}
+  - Walls

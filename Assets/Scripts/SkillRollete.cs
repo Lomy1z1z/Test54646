@@ -14,9 +14,9 @@ public class SkillRollete : MonoBehaviour
     public GameObject ballSkillPick;
     public GameObject shildSkillPick;
 
-    public GameObject ballSkill;
+    // public GameObject ballSkill;
 
-    public GameObject shildSkill;
+    // public GameObject shildSkill;
 
     public GameObject rollAlert;
 
@@ -59,21 +59,28 @@ public void PlayRollete(){
      PlayerM.instance.maxDamage += 3;
      GameMaster.instance.damageToPrint = PlayerM.instance.enemyDamege * 10;
      GameMaster.instance.damageText.text = GameMaster.instance.damageToPrint.ToString();
+     GameMaster.instance.data.minDamagedata = PlayerM.instance.minDamage;
+     GameMaster.instance.data.maxDamagedata = PlayerM.instance.maxDamage;
     break;
   case 1:
     CurrentSkill = skills[1];
      PlayerM.instance.hpImage.fillAmount += 0.1f;
      PlayerM.instance.hpImageBackground.fillAmount += 0.1f;
      PlayerM.instance.hp += 10;
-     
+     GameMaster.instance.data.hpImageDeta =  PlayerM.instance.hpImage.fillAmount;
+     GameMaster.instance.data.hpBackGroundImageDeta =  PlayerM.instance.hpImageBackground.fillAmount;
+     GameMaster.instance.data.hpData =  PlayerM.instance.hp;
     break;
   case 2:
     CurrentSkill = skills[2];
     PlayerM.instance.runspeed +=3;
+     GameMaster.instance.data.runSpeedData =  PlayerM.instance.runspeed;
     break;
   case 3:
    CurrentSkill = skills[3];
+   GameMaster.instance.data.attackRateData = PlayerM.instance.attackRate;
    PlayerM.instance.attackRate +=1;
+   
    shootAnim += 0.5f;
    PlayerM.instance.animator.SetFloat("shootSpeed",shootAnim);
     break;
@@ -121,6 +128,7 @@ public void FrieBulletSkill(){
     PlayerM.instance.bullet = PlayerM.instance.fireBullet;
     GameMaster.instance.skillPoints -=1;
     isFireBall = true;
+    GameMaster.instance.data.bulletTypeData = PlayerM.instance.fireBullet;
     }
 
 }
@@ -130,24 +138,27 @@ public void TripleShotActive(){
     PlayerM.instance.tripleShot = true;
     GameMaster.instance.skillPoints -=1;
     isTripleShot = true;
+    GameMaster.instance.data.tripleShootData = PlayerM.instance.tripleShot;
     }
 
 }
 public void BallSkillActive(){
     if(GameMaster.instance.skillPoints > 0 && isBallSkill == false){
     ballSkillPick.SetActive(true);
-    ballSkill.SetActive(true);
+    GameMaster.instance.ballSkill.SetActive(true);
     GameMaster.instance.skillPoints -=1;
     isBallSkill = true;
+    GameMaster.instance.data.ballSkillData = true;
     }
 
 }
 public void ShildSkillActive(){
     if(GameMaster.instance.skillPoints > 0 && isShildSkill == false){
     shildSkillPick.SetActive(true);
-    shildSkill.SetActive(true);
+    GameMaster.instance.shildSkill.SetActive(true);
     GameMaster.instance.skillPoints -=1;
     isShildSkill = true;
+    GameMaster.instance.data.shildSkillData = true;
     }
 
     

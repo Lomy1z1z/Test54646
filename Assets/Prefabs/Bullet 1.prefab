@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3036396960961424709}
   - component: {fileID: 6245417955239758792}
   - component: {fileID: 3209690791604320663}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Bullet 1
-  m_TagString: Bullet
+  m_TagString: FireBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,6 +164,10 @@ PrefabInstance:
     - target: {fileID: 449373531369692188, guid: 0b9a90ad5bd2ca045a0979dd2a1b69f8, type: 3}
       propertyPath: m_Name
       value: Particle System
+      objectReference: {fileID: 0}
+    - target: {fileID: 449373531369692188, guid: 0b9a90ad5bd2ca045a0979dd2a1b69f8, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6612253356419924259, guid: 0b9a90ad5bd2ca045a0979dd2a1b69f8, type: 3}
       propertyPath: m_LocalPosition.x

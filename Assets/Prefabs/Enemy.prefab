@@ -75,7 +75,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &3352705369267319220
+--- !u!1 &3908144256375715895
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,38 +83,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1703122348136398457}
-  - component: {fileID: 2178877530203376499}
-  - component: {fileID: 5646637193800948760}
-  m_Layer: 0
+  - component: {fileID: 1061712891495139883}
+  - component: {fileID: 3875415380888648463}
+  - component: {fileID: 6893021875835876140}
+  m_Layer: 3
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1703122348136398457
+--- !u!4 &1061712891495139883
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3352705369267319220}
+  m_GameObject: {fileID: 3908144256375715895}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.03, y: -1.01, z: -0.23}
+  m_LocalRotation: {x: -0.71947086, y: -0, z: -0, w: 0.6945227}
+  m_LocalPosition: {x: 0, y: -1.22, z: 0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7374539498081981869}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!198 &2178877530203376499
+  m_LocalEulerAnglesHint: {x: -92.022, y: 0, z: 0}
+--- !u!198 &3875415380888648463
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3352705369267319220}
+  m_GameObject: {fileID: 3908144256375715895}
   serializedVersion: 8
   lengthInSec: 5
   simulationSpeed: 1
@@ -191,7 +191,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -244,7 +244,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -298,7 +298,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.5692185, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.6563935, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4011,7 +4011,7 @@ ParticleSystem:
   TrailModule:
     enabled: 0
     mode: 0
-    ratio: 0.18
+    ratio: 1
     lifetime:
       serializedVersion: 2
       minMaxState: 0
@@ -4082,7 +4082,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.8076823, b: 0, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4200,7 +4200,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.86415094, g: 0.86415094, b: 0.86415094, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4831,14 +4831,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &5646637193800948760
+--- !u!199 &6893021875835876140
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3352705369267319220}
+  m_GameObject: {fileID: 3908144256375715895}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -4941,7 +4941,7 @@ Transform:
   - {fileID: 4143647700231280753}
   - {fileID: 4566454432338221675}
   - {fileID: 8886243587989070026}
-  - {fileID: 1703122348136398457}
+  - {fileID: 1061712891495139883}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1419870538710115635
@@ -5039,6 +5039,11 @@ MonoBehaviour:
   attackRate: 0.6
   dmgText: {fileID: 3682504917167634440, guid: 4be2c277bf65f0b43b624c03825002f6, type: 3}
   ballDamagePrint: 2
+  fireDamagePrint: 1
+  expSparkle: {fileID: 8654436066249334488, guid: 25239ae893e46ad49b8f138ca3623d23, type: 3}
+  isOnFire: 0
+  fire: {fileID: 3875415380888648463}
+  burnChance: 0
 --- !u!1 &7975960135464900102
 GameObject:
   m_ObjectHideFlags: 0

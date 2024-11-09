@@ -15,22 +15,23 @@ public class WaveManeger : MonoBehaviour
    
     public static WaveManeger instance; 
     public GameObject menuImg;
-    int currentWave = 0;
+    public int currentWave = 0;
     public Wave wave;
     public int enemiesRemaning = 0;
     public TMP_Text enemytext;
+    public TMP_Text waveNumText;
+    public int waveNum = 1;
+
+    public int waveWaitTime = 2;
 
 
     public bool finish;
+    
 
     
      
     
    
-   
-    
-
-
     
     private void Awake(){
         
@@ -49,6 +50,10 @@ public class WaveManeger : MonoBehaviour
        
 
      StartCoroutine(WaveDelay());
+     waveNumText.text = waveNum.ToString();
+
+     
+     
 
     }
 
@@ -75,10 +80,9 @@ public class WaveManeger : MonoBehaviour
             enemies.Add(enemySpawn);
             enemiesRemaning = enemies.Count;
             enemytext.text = enemiesRemaning.ToString();
-
-
         }
-
+        waveNumText.text = waveNum.ToString();
+        waveNum++;
     }
 
     public void OnEnemyDeath(Enemy enemy){
@@ -91,12 +95,14 @@ public class WaveManeger : MonoBehaviour
             if(wave.waves.Count > currentWave){
 
               StartCoroutine(WaveDelay());
-
+    
             }
             else{
-                 Time.timeScale = 0;
-                menuImg.SetActive(true);
-                finish = true;
+                //  Time.timeScale = 0;
+                // menuImg.SetActive(true);
+                // finish = true;
+                SceneManager.LoadScene(2);
+                GameMaster.instance.DestroyThyself();
                 
                    
             }
@@ -105,7 +111,7 @@ public class WaveManeger : MonoBehaviour
     }
 
     IEnumerator WaveDelay(){
-         yield return new WaitForSeconds(2);
+         yield return new WaitForSeconds(waveWaitTime);
          WaveSystem();
          
      }

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b8f77ef5f09d942a0f328506d199a3, type: 3}
+  m_Name: data
+  m_EditorClassIdentifier: 
+  levelData: 1
+  minDamagedata: 1
+  maxDamagedata: 10
+  hpImageDeta: 0.3
+  hpBackGroundImageDeta: 0.3
+  hpData: 30
+  runSpeedData: 25
+  attackRateData: 0.1
+  bulletTypeData: {fileID: 3540496837989767626, guid: 5cf984241d6c09a4db269c8af7c095d4, type: 3}
+  tripleShootData: 0
+  ballSkillData: 0
+  shildSkillData: 0

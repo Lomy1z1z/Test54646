@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class GameMaster : MonoBehaviour
@@ -13,7 +14,49 @@ public class GameMaster : MonoBehaviour
     public TMP_Text levelText;
     public int level = 1;
     public Transform playerTransform;
-    public bool isPooshed = false;
+    public GameObject skillPick;
+
+    public float skillPoints;
+
+    
+    public Camera cam;
+
+    public TMP_Text textSP;
+
+
+    public float damageToPrint;
+
+     public TMP_Text damageText;
+
+     public float sparkleExpAmount = 0.35f;
+
+     public Transform bombTransform;
+
+     public Data data;
+
+     public GameObject ballSkill;
+
+    public GameObject shildSkill;
+
+     
+
+     
+
+
+     
+
+    
+
+    
+
+
+
+   
+
+    
+    
+
+    
     
 
     private void Awake(){
@@ -30,7 +73,12 @@ public class GameMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        level = 1;
+
+
+        Time.timeScale = 1;
+
+        level = data.levelData;
+       
     }
 
     // Update is called once per frame
@@ -39,20 +87,126 @@ public class GameMaster : MonoBehaviour
         expImage.fillAmount = exp;
 
         levelText.text = level.ToString();
+        textSP.text = skillPoints.ToString();
 
         if(exp >= 1){
             LevelUp();
-            exp = 0;
+             data.levelData = level; 
         }
+
+       
+
         
+
+        
+
+       
+
+         
+
     }
+
+     
+
+
+    public void DestroyThyself()
+{
+    
+   Destroy(gameObject);
+   instance = null;    // because destroy doesn't happen until end of frame
+}
+
+    
 
     
 
 
      public void LevelUp(){
          level += 1;
-
+         skillPick.SetActive(true);
+          Time.timeScale = 0;
+          skillPoints +=1;
+          exp = 0;
+          sparkleExpAmount -= 0.05f;
+          
 
      }
+
+     public void RestartLevel(){
+         data.levelData = 1;
+
+    data.minDamagedata = 1;
+    data.maxDamagedata = 10;
+
+    data.hpImageDeta =  0.3f;
+    data.hpBackGroundImageDeta =  0.3f;
+    data.hpData = 30f;
+
+    data.runSpeedData = 25f;
+
+   data.attackRateData = 0.1f;
+   data.shildSkillData = false;
+   data.ballSkillData = false;
+   data.tripleShootData = false;
+   data.bulletTypeData = PlayerM.instance.regulerBullet;
+        SceneManager.LoadScene(1);
+         DestroyThyself();
+     }
+
+     public void MenuBotton(){
+        Time.timeScale = 0;
+        WaveManeger.instance.menuImg.SetActive(true);
+     }
+     public void ReturnToLobby(){
+         data.levelData = 1;
+
+    data.minDamagedata = 1;
+    data.maxDamagedata = 10;
+
+    data.hpImageDeta =  0.3f;
+    data.hpBackGroundImageDeta =  0.3f;
+    data.hpData = 30f;
+
+    data.runSpeedData = 25f;
+
+   data.attackRateData = 0.1f;
+   data.shildSkillData = false;
+   data.ballSkillData = false;
+   data.tripleShootData = false;
+   data.bulletTypeData = PlayerM.instance.regulerBullet;
+        SceneManager.LoadScene(0);
+        DestroyThyself();
+        
+        
+     }
+     public void ResumeGame(){
+        if(WaveManeger.instance.finish == false){
+         Time.timeScale = 1;
+         WaveManeger.instance.menuImg.SetActive(false);
+         }
+        
+     }
+     
+     public void ExitTab(GameObject window){
+
+        window.SetActive(false);
+
+     }
+
+
+    
+
+      
+
+
+    
+
+
+
+     
+
+
+     
+
+     
 }

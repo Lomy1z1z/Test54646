@@ -8,6 +8,7 @@ public class EnemyBullet : Bullet
     [SerializeField]float enemyBulletSpeed = 5;
     Enemy enemy;
     float lifespan;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,13 @@ public class EnemyBullet : Bullet
         }
 
         
+    }
+
+
+    public void OnTriggerEnter(Collider other){
+        if(other.gameObject.tag == "ShildSkill"){
+            Destroy(gameObject);
+        }
     }
 
 

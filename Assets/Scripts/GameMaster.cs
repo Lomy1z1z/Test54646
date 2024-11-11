@@ -36,7 +36,7 @@ public class GameMaster : MonoBehaviour
 
      public GameObject ballSkill;
 
-    public GameObject shildSkill;
+    public GameObject shieldSkill;
 
      
 
@@ -138,17 +138,17 @@ public class GameMaster : MonoBehaviour
     data.minDamagedata = 1;
     data.maxDamagedata = 10;
 
-    data.hpImageDeta =  0.3f;
-    data.hpBackGroundImageDeta =  0.3f;
+    data.hpImageData =  0.3f;
+    data.hpBackGroundImageData =  0.3f;
     data.hpData = 30f;
 
     data.runSpeedData = 25f;
 
    data.attackRateData = 0.1f;
-   data.shildSkillData = false;
+   data.shieldSkillData = false;
    data.ballSkillData = false;
    data.tripleShootData = false;
-   data.bulletTypeData = PlayerM.instance.regulerBullet;
+   data.bulletTypeData = PlayerM.instance.bullet;
         SceneManager.LoadScene(1);
          DestroyThyself();
      }
@@ -163,17 +163,17 @@ public class GameMaster : MonoBehaviour
     data.minDamagedata = 1;
     data.maxDamagedata = 10;
 
-    data.hpImageDeta =  0.3f;
-    data.hpBackGroundImageDeta =  0.3f;
+    data.hpImageData =  0.3f;
+    data.hpBackGroundImageData =  0.3f;
     data.hpData = 30f;
 
     data.runSpeedData = 25f;
 
    data.attackRateData = 0.1f;
-   data.shildSkillData = false;
+   data.shieldSkillData = false;
    data.ballSkillData = false;
    data.tripleShootData = false;
-   data.bulletTypeData = PlayerM.instance.regulerBullet;
+   data.bulletTypeData = PlayerM.instance.bullet;
         SceneManager.LoadScene(0);
         DestroyThyself();
         

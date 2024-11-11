@@ -12,7 +12,7 @@ public class SkillRollete : MonoBehaviour
     public GameObject TripleShotPick;
 
     public GameObject ballSkillPick;
-    public GameObject shildSkillPick;
+    public GameObject shieldSkillPick;
 
     // public GameObject ballSkill;
 
@@ -26,7 +26,7 @@ public class SkillRollete : MonoBehaviour
     public bool isTripleShot;
     public bool isBallSkill;
 
-    public bool isShildSkill;
+    public bool isShieldSkill;
     public float shootAnim = 1.5f;
      
 
@@ -57,7 +57,7 @@ public void PlayRollete(){
     CurrentSkill = skills[0];
      PlayerM.instance.minDamage += 3;
      PlayerM.instance.maxDamage += 3;
-     GameMaster.instance.damageToPrint = PlayerM.instance.enemyDamege * 10;
+     GameMaster.instance.damageToPrint = PlayerM.instance.enemyDamage * 10;
      GameMaster.instance.damageText.text = GameMaster.instance.damageToPrint.ToString();
      GameMaster.instance.data.minDamagedata = PlayerM.instance.minDamage;
      GameMaster.instance.data.maxDamagedata = PlayerM.instance.maxDamage;
@@ -67,8 +67,8 @@ public void PlayRollete(){
      PlayerM.instance.hpImage.fillAmount += 0.1f;
      PlayerM.instance.hpImageBackground.fillAmount += 0.1f;
      PlayerM.instance.hp += 10;
-     GameMaster.instance.data.hpImageDeta =  PlayerM.instance.hpImage.fillAmount;
-     GameMaster.instance.data.hpBackGroundImageDeta =  PlayerM.instance.hpImageBackground.fillAmount;
+     GameMaster.instance.data.hpImageData =  PlayerM.instance.hpImage.fillAmount;
+     GameMaster.instance.data.hpBackGroundImageData =  PlayerM.instance.hpImageBackground.fillAmount;
      GameMaster.instance.data.hpData =  PlayerM.instance.hp;
     break;
   case 2:
@@ -153,12 +153,12 @@ public void BallSkillActive(){
 
 }
 public void ShildSkillActive(){
-    if(GameMaster.instance.skillPoints > 0 && isShildSkill == false){
-    shildSkillPick.SetActive(true);
-    GameMaster.instance.shildSkill.SetActive(true);
+    if(GameMaster.instance.skillPoints > 0 && isShieldSkill == false){
+    shieldSkillPick.SetActive(true);
+    GameMaster.instance.shieldSkill.SetActive(true);
     GameMaster.instance.skillPoints -=1;
-    isShildSkill = true;
-    GameMaster.instance.data.shildSkillData = true;
+    isShieldSkill = true;
+    GameMaster.instance.data.shieldSkillData = true;
     }
 
     

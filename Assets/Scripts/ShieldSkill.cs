@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ShildSkill : MonoBehaviour
 {
-    public SphereCollider shlidCollider;
-    public MeshRenderer shildRenderer;
+    public SphereCollider shieldCollider;
+    public MeshRenderer shieldRenderer;
 
-    public float ShildCooldown = 60; 
+    public float ShieldCooldown = 60; 
     
     
     // Start is called before the first frame update
@@ -28,8 +28,8 @@ public class ShildSkill : MonoBehaviour
     public void OnTriggerEnter(Collider other){
 
         if(other.gameObject.tag == enemyBall || other.gameObject.tag == MeleeEnemy ){
-            shlidCollider.enabled = false;
-            shildRenderer.enabled = false;
+            shieldCollider.enabled = false;
+            shieldRenderer.enabled = false;
             StartCoroutine(ResetShild());
         }
 
@@ -38,9 +38,9 @@ public class ShildSkill : MonoBehaviour
 
   
  IEnumerator ResetShild(){
-         yield return new WaitForSecondsRealtime(ShildCooldown);
-         shlidCollider.enabled = true;
-         shildRenderer.enabled = true;
+         yield return new WaitForSecondsRealtime(ShieldCooldown);
+         shieldCollider.enabled = true;
+         shieldRenderer.enabled = true;
          
      }
         

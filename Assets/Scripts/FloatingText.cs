@@ -12,9 +12,5 @@ public class FloatingText : MonoBehaviour
         Destroy(gameObject,1f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-           
-    }
+   
 }

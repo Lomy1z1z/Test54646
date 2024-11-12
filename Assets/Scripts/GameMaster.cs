@@ -149,8 +149,12 @@ public class GameMaster : MonoBehaviour
    data.ballSkillData = false;
    data.tripleShootData = false;
    data.bulletTypeData = PlayerM.instance.bullet;
-        SceneManager.LoadScene(1);
-         DestroyThyself();
+         SceneManager.LoadScene(1);
+          DestroyThyself();
+        // GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+        //  foreach(GameObject go in gos)
+        //  Destroy(go);
+        //  WaveManeger.instance.currentWave = 0;
      }
 
      public void MenuBotton(){

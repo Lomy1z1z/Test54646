@@ -8677,7 +8677,7 @@ MonoBehaviour:
   fireBulletPick: {fileID: 1301258450}
   TripleShotPick: {fileID: 1740051363}
   ballSkillPick: {fileID: 1788954275}
-  shieldSkillPick: {fileID: 0}
+  shieldSkillPick: {fileID: 1709255331}
   rollAlert: {fileID: 1304998171}
   continueAlert: {fileID: 94526304}
   isFireBall: 0
@@ -9160,6 +9160,14 @@ PrefabInstance:
     - target: {fileID: 3104152780516175365, guid: f00c5ed989c14484086c00690b2570cd, type: 3}
       propertyPath: m_Name
       value: BallSkill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3104152780516175365, guid: f00c5ed989c14484086c00690b2570cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620903543586672814, guid: f00c5ed989c14484086c00690b2570cd, type: 3}
+      propertyPath: radius
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3620903543586672814, guid: f00c5ed989c14484086c00690b2570cd, type: 3}
       propertyPath: target

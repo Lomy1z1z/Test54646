@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/GarbageSene/Toutorial.unity
     guid: 5184c7b3e63db08418de428658b46826
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Boss Level.unity
     guid: 1f338056807fdce4a933c9cf76ed9f99
   m_configObjects: {}

@@ -9,11 +9,19 @@ TagManager:
   - enemyBall
   - MeleeEnemy
   - BallSkill
+<<<<<<< HEAD
   - ShildSkill
+=======
+>>>>>>> waves
   - Walls
   - exp
   - FireBullet
   - Ground
+<<<<<<< HEAD
+=======
+  - ShieldSkill
+  - ShildSkill
+>>>>>>> waves
   layers:
   - Default
   - TransparentFX
@@ -26,7 +34,11 @@ TagManager:
   - Player
   - MeleeEnemy
   - BallSkill
+<<<<<<< HEAD
   - ShildSkill
+=======
+  - ShieldSkill
+>>>>>>> waves
   - Walls
   - exp
   - FireBullet

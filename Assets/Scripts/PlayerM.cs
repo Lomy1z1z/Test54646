@@ -15,12 +15,13 @@ public class PlayerM : MonoBehaviour
     [SerializeField] Transform gun3;
     [SerializeField] public GameObject bullet;
     public Transform target;
-    public float regulerBulletDamage = 0.4f;
-    public float turnSmoothTime = 0.1f;
-    public float turnSmoothVelocity;
+    public float regularBulletDamage = 0.4f;
+     public float turnSmoothTime = 0.1f;
+     public float turnSmoothVelocity;
      public float hp = 100;
     public Image hpImage;
     public Image hpImageBackground;
+<<<<<<< HEAD
     public float dashForce = 500;
     public float dashTimer;
     private bool isDashing = false;
@@ -31,6 +32,16 @@ public class PlayerM : MonoBehaviour
     public bool isHittble = true;
 
      public float enemyDamege = 1.5f;
+=======
+    
+    public bool tripleShot;
+
+    public Material Visible;
+
+    public bool isVisble = true;
+
+     public float enemyDamage = 1.5f;
+>>>>>>> waves
     public static PlayerM instance; 
 
     public GameObject fireBullet;
@@ -78,7 +89,11 @@ public class PlayerM : MonoBehaviour
 
         
         
+<<<<<<< HEAD
         invisble.SetColor("_Color", Color.blue);
+=======
+        Visible.SetColor("_Color", Color.blue);
+>>>>>>> waves
         instance = this;
         RandomEnemyDamage();
 
@@ -162,7 +177,11 @@ public class PlayerM : MonoBehaviour
 
     public void Shooting(){
         RandomEnemyDamage();
+<<<<<<< HEAD
         GameMaster.instance.damageToPrint = Mathf.RoundToInt(enemyDamege);
+=======
+        GameMaster.instance.damageToPrint = Mathf.RoundToInt(enemyDamage);
+>>>>>>> waves
         GameMaster.instance.damageText.text =  GameMaster.instance.damageToPrint.ToString();
         if(target != null){
         animator.SetBool("Shooting",true);
@@ -174,7 +193,11 @@ public class PlayerM : MonoBehaviour
 
     public void tripleShooting(){
          RandomEnemyDamage();
+<<<<<<< HEAD
         GameMaster.instance.damageToPrint = Mathf.RoundToInt(enemyDamege);
+=======
+        GameMaster.instance.damageToPrint = Mathf.RoundToInt(enemyDamage);
+>>>>>>> waves
         GameMaster.instance.damageText.text =  GameMaster.instance.damageToPrint.ToString();
         if(target != null){
         animator.SetBool("Shooting",true);
@@ -189,8 +212,13 @@ public class PlayerM : MonoBehaviour
     public void TakeDamage(float damage){
         hp -= damage;
          hpImage.fillAmount = hp/100;
+<<<<<<< HEAD
          invisble.SetColor("_Color", Color.white);
          isHittble = false;
+=======
+         Visible.SetColor("_Color", Color.white);
+         isVisble = false;
+>>>>>>> waves
         
           if(hp <= 0){
               Time.timeScale = 0;
@@ -201,7 +229,11 @@ public class PlayerM : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider other){
+<<<<<<< HEAD
         if(other.gameObject.tag == enemyBall  && hp > 0  && isHittble || other.gameObject.tag == Enemy && hp > 0  && isHittble || other.gameObject.tag == MeleeEnemy && hp > 0  && isHittble){
+=======
+        if(other.gameObject.tag == enemyBall  && hp > 0  && isVisble || other.gameObject.tag == Enemy && hp > 0  && isVisble || other.gameObject.tag == MeleeEnemy && hp > 0  && isVisble){
+>>>>>>> waves
             TakeDamage(10f);
             StartCoroutine(ResetHit());
         }
@@ -216,7 +248,11 @@ public class PlayerM : MonoBehaviour
 
 
     public void OnCollisionEnter(Collision other){
+<<<<<<< HEAD
         if(other.gameObject.tag == Enemy && hp > 0   && isHittble || other.gameObject.tag == MeleeEnemy && hp > 0  && isHittble){
+=======
+        if(other.gameObject.tag == Enemy && hp > 0   && isVisble || other.gameObject.tag == MeleeEnemy && hp > 0  && isVisble){
+>>>>>>> waves
             TakeDamage(10f);
             StartCoroutine(ResetHit());
             
@@ -231,8 +267,13 @@ public class PlayerM : MonoBehaviour
 
  IEnumerator ResetHit(){
          yield return new WaitForSeconds(0.5f);
+<<<<<<< HEAD
           invisble.SetColor("_Color", Color.blue);
           isHittble = true;
+=======
+          Visible.SetColor("_Color", Color.blue);
+          isVisble = true;
+>>>>>>> waves
          
      }
 
@@ -242,7 +283,11 @@ public class PlayerM : MonoBehaviour
 
      public void RandomEnemyDamage(){
 
+<<<<<<< HEAD
         enemyDamege = Random.Range(minDamage,maxDamage);
+=======
+        enemyDamage = Random.Range(minDamage,maxDamage);
+>>>>>>> waves
 
         
     }

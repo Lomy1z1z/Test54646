@@ -34,7 +34,11 @@ public class EnemyBullet : Bullet
 
 
     public void OnTriggerEnter(Collider other){
+<<<<<<< HEAD
         if(other.gameObject.tag == "ShildSkill"){
+=======
+        if(other.gameObject.tag == "ShieldSkill"){
+>>>>>>> waves
             Destroy(gameObject);
         }
     }

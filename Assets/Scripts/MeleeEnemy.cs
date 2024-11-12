@@ -8,7 +8,11 @@ public class MeleeEnemy : Enemy
 {
 
     [SerializeField] Rigidbody meleeEnemyBody;
+<<<<<<< HEAD
     [SerializeField]  float MeleeEnemySpeed;
+=======
+    [SerializeField]  float meleeEnemySpeed;
+>>>>>>> waves
 
     [SerializeField] float knockForce;
        public bool isPushed = false;
@@ -36,7 +40,11 @@ public class MeleeEnemy : Enemy
     void FixedUpdate()
     {
 
+<<<<<<< HEAD
         MeleeEnemySpeed = 400;
+=======
+        meleeEnemySpeed = 400;
+>>>>>>> waves
         knockForce = 1000;
 
          enemyHpImage.fillAmount = enemyHp;
@@ -47,7 +55,11 @@ public class MeleeEnemy : Enemy
 
           if(isPushed == false){
 
+<<<<<<< HEAD
            meleeEnemyBody.velocity = direction * MeleeEnemySpeed * Time.fixedDeltaTime;
+=======
+           meleeEnemyBody.velocity = direction * meleeEnemySpeed * Time.fixedDeltaTime;
+>>>>>>> waves
           }
           
 
@@ -78,12 +90,20 @@ public class MeleeEnemy : Enemy
        public void OnCollisionEnter(Collision other){
            if(other.gameObject.tag == "Bullet"){
               isPushed = true;
+<<<<<<< HEAD
               TakeDamage(PlayerM.instance.enemyDamege/50);
+=======
+              TakeDamage(PlayerM.instance.enemyDamage/50);
+>>>>>>> waves
            }
 
             if(other.gameObject.tag == "FireBullet"){
              isPushed = true;
+<<<<<<< HEAD
              TakeDamage(PlayerM.instance.enemyDamege/50);
+=======
+             TakeDamage(PlayerM.instance.enemyDamage/50);
+>>>>>>> waves
               burnChance = UnityEngine.Random.Range(0,101);
               if(burnChance > 70 && !isOnFire){
             isOnFire = true;

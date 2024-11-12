@@ -12,9 +12,13 @@ public class FloatingText : MonoBehaviour
         Destroy(gameObject,1f);
     }
 
+<<<<<<< HEAD
     // Update is called once per frame
     void Update()
     {
            
     }
+=======
+   
+>>>>>>> waves
 }

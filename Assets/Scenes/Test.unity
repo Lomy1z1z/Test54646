@@ -467,6 +467,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72819660}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
+=======
+--- !u!1 &75498824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7308699117951135894, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+  m_PrefabInstance: {fileID: 9105917855249433325}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> waves
 --- !u!1 &75825151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,6 +1540,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286384961}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &298660770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5562871208096777215, guid: c74aaeea974834e4fa9079c7cc56e36c, type: 3}
@@ -1542,6 +1551,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8165241057925852630, guid: c74aaeea974834e4fa9079c7cc56e36c, type: 3}
   m_PrefabInstance: {fileID: 1595054003495123079}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> waves
 --- !u!1 &302647088
 GameObject:
   m_ObjectHideFlags: 0
@@ -2836,6 +2847,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520516677}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &538434947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2941,6 +2953,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538434947}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+=======
+>>>>>>> waves
 --- !u!1 &540465728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3127,6 +3141,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &603037169
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,6 +3173,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 810786028}
   m_LocalEulerAnglesHint: {x: 0, y: 23.82, z: 0}
+=======
+>>>>>>> waves
 --- !u!1 &604160376
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,6 +3435,7 @@ Transform:
   - {fileID: 988197228}
   m_Father: {fileID: 1931225984}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &678063669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3449,6 +3467,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 810786028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> waves
 --- !u!1 &679787878
 GameObject:
   m_ObjectHideFlags: 0
@@ -5764,6 +5784,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008269572}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &1043842060 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2427993219103948161, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
@@ -5790,6 +5811,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+=======
+>>>>>>> waves
 --- !u!1 &1094222803
 GameObject:
   m_ObjectHideFlags: 3
@@ -5992,6 +6015,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100051123}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &1137417013
 GameObject:
   m_ObjectHideFlags: 0
@@ -6023,6 +6047,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 810786028}
   m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
+=======
+>>>>>>> waves
 --- !u!1 &1139530985
 GameObject:
   m_ObjectHideFlags: 0
@@ -8389,11 +8415,19 @@ MonoBehaviour:
   textSP: {fileID: 812979884}
   damageToPrint: 0
   damageText: {fileID: 7555162850091905558, guid: 4be2c277bf65f0b43b624c03825002f6, type: 3}
+<<<<<<< HEAD
   sparkleExpAmount: 3
   bombTransform: {fileID: 0}
   data: {fileID: 11400000, guid: 39a41cb3c6a199846912536790d7d719, type: 2}
   ballSkill: {fileID: 1694525717}
   shildSkill: {fileID: 298660770}
+=======
+  sparkleExpAmount: 2
+  bombTransform: {fileID: 0}
+  data: {fileID: 11400000, guid: 39a41cb3c6a199846912536790d7d719, type: 2}
+  ballSkill: {fileID: 1694525717}
+  shieldSkill: {fileID: 75498824}
+>>>>>>> waves
 --- !u!4 &1890805767
 Transform:
   m_ObjectHideFlags: 0
@@ -8906,13 +8940,21 @@ MonoBehaviour:
   fireBulletPick: {fileID: 1301258450}
   TripleShotPick: {fileID: 1740051363}
   ballSkillPick: {fileID: 1788954275}
+<<<<<<< HEAD
   shildSkillPick: {fileID: 1709255331}
+=======
+  shieldSkillPick: {fileID: 0}
+>>>>>>> waves
   rollAlert: {fileID: 1304998171}
   continueAlert: {fileID: 94526304}
   isFireBall: 0
   isTripleShot: 0
   isBallSkill: 0
+<<<<<<< HEAD
   isShildSkill: 0
+=======
+  isShieldSkill: 0
+>>>>>>> waves
   shootAnim: 1.5
 --- !u!1 &2003987663
 GameObject:
@@ -9216,6 +9258,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &1595054003495123079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9273,6 +9316,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c74aaeea974834e4fa9079c7cc56e36c, type: 3}
+=======
+>>>>>>> waves
 --- !u!1001 &3528006127955290436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9508,6 +9553,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2427993219103948161, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -9520,6 +9566,8 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> waves
     - target: {fileID: 6622587146306523480, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.91
@@ -9560,10 +9608,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 6889323251190673796, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e19a8f1294c8ecf4492c251a328e8b8d, type: 2}
+=======
+>>>>>>> waves
     - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
       propertyPath: cam
       value: 
@@ -9577,6 +9628,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 396809159}
     - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+<<<<<<< HEAD
       propertyPath: animator
       value: 
       objectReference: {fileID: 1043842061}
@@ -9585,10 +9637,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: e19a8f1294c8ecf4492c251a328e8b8d, type: 2}
     - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+=======
+>>>>>>> waves
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1589249711}
     - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+<<<<<<< HEAD
       propertyPath: runspeed
       value: 25
       objectReference: {fileID: 0}
@@ -9635,6 +9690,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2427993219103948161, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1043842061}
+=======
+      propertyPath: hpImageBackground
+      value: 
+      objectReference: {fileID: 72819662}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> waves
   m_SourcePrefab: {fileID: 100100000, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

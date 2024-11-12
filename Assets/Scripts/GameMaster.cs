@@ -36,7 +36,11 @@ public class GameMaster : MonoBehaviour
 
      public GameObject ballSkill;
 
+<<<<<<< HEAD
     public GameObject shildSkill;
+=======
+    public GameObject shieldSkill;
+>>>>>>> waves
 
      
 
@@ -138,17 +142,29 @@ public class GameMaster : MonoBehaviour
     data.minDamagedata = 1;
     data.maxDamagedata = 10;
 
+<<<<<<< HEAD
     data.hpImageDeta =  0.3f;
     data.hpBackGroundImageDeta =  0.3f;
+=======
+    data.hpImageData =  0.3f;
+    data.hpBackGroundImageData =  0.3f;
+>>>>>>> waves
     data.hpData = 30f;
 
     data.runSpeedData = 25f;
 
    data.attackRateData = 0.1f;
+<<<<<<< HEAD
    data.shildSkillData = false;
    data.ballSkillData = false;
    data.tripleShootData = false;
    data.bulletTypeData = PlayerM.instance.regulerBullet;
+=======
+   data.shieldSkillData = false;
+   data.ballSkillData = false;
+   data.tripleShootData = false;
+   data.bulletTypeData = PlayerM.instance.bullet;
+>>>>>>> waves
         SceneManager.LoadScene(1);
          DestroyThyself();
      }
@@ -163,17 +179,29 @@ public class GameMaster : MonoBehaviour
     data.minDamagedata = 1;
     data.maxDamagedata = 10;
 
+<<<<<<< HEAD
     data.hpImageDeta =  0.3f;
     data.hpBackGroundImageDeta =  0.3f;
+=======
+    data.hpImageData =  0.3f;
+    data.hpBackGroundImageData =  0.3f;
+>>>>>>> waves
     data.hpData = 30f;
 
     data.runSpeedData = 25f;
 
    data.attackRateData = 0.1f;
+<<<<<<< HEAD
    data.shildSkillData = false;
    data.ballSkillData = false;
    data.tripleShootData = false;
    data.bulletTypeData = PlayerM.instance.regulerBullet;
+=======
+   data.shieldSkillData = false;
+   data.ballSkillData = false;
+   data.tripleShootData = false;
+   data.bulletTypeData = PlayerM.instance.bullet;
+>>>>>>> waves
         SceneManager.LoadScene(0);
         DestroyThyself();
         

@@ -45,7 +45,11 @@ GameObject:
   - component: {fileID: 3708548770552714545}
   - component: {fileID: 4921426507091206473}
   - component: {fileID: 6910797914462337223}
+<<<<<<< HEAD
   - component: {fileID: 9133101732296849879}
+=======
+  - component: {fileID: 2371422681314157049}
+>>>>>>> waves
   m_Layer: 8
   m_Name: Player 1
   m_TagString: Player
@@ -69,7 +73,10 @@ Transform:
   - {fileID: 2204908789991023688}
   - {fileID: 1668597509908059473}
   - {fileID: 6319330136732079037}
+<<<<<<< HEAD
   - {fileID: 6230892985399230113}
+=======
+>>>>>>> waves
   - {fileID: 4813973262920463074}
   - {fileID: 5621442969425854894}
   - {fileID: 3025612570747705404}
@@ -195,12 +202,17 @@ MonoBehaviour:
   gun3: {fileID: 6319330136732079037}
   bullet: {fileID: 3540496837989767626, guid: 4a64e04045b19cb4e988bf81047a4298, type: 3}
   target: {fileID: 0}
+<<<<<<< HEAD
   regulerBulletDamage: 0.4
+=======
+  regularBulletDamage: 0.4
+>>>>>>> waves
   turnSmoothTime: 0.1
   turnSmoothVelocity: 0
   hp: 30
   hpImage: {fileID: 0}
   hpImageBackground: {fileID: 0}
+<<<<<<< HEAD
   dashForce: 15000
   dashTimer: 0
   tripleShot: 0
@@ -211,12 +223,26 @@ MonoBehaviour:
   cam: {fileID: 0}
   camera: {fileID: 0}
   animator: {fileID: 9133101732296849879}
+=======
+  tripleShot: 0
+  Visible: {fileID: 2100000, guid: e19a8f1294c8ecf4492c251a328e8b8d, type: 2}
+  isVisble: 1
+  enemyDamage: 1.5
+  fireBullet: {fileID: 3540496837989767626, guid: 5cf984241d6c09a4db269c8af7c095d4, type: 3}
+  cam: {fileID: 0}
+  camera: {fileID: 0}
+  animator: {fileID: 2371422681314157049}
+>>>>>>> waves
   minDamage: 1
   maxDamage: 10
   regulerBullet: {fileID: 3540496837989767626, guid: 4a64e04045b19cb4e988bf81047a4298, type: 3}
   nextAttackTime: 0
   attackRate: 1
+<<<<<<< HEAD
 --- !u!95 &9133101732296849879
+=======
+--- !u!95 &2371422681314157049
+>>>>>>> waves
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -435,6 +461,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &6731346696873309046
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +567,8 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> waves
 --- !u!1 &7308699117951135894
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,11 +581,19 @@ GameObject:
   - component: {fileID: 6729294053150682867}
   - component: {fileID: 7954305467444052350}
   - component: {fileID: 746815236663609678}
+<<<<<<< HEAD
   - component: {fileID: 5354126918404996758}
   - component: {fileID: 9122125236139679606}
   m_Layer: 11
   m_Name: ShildSkill
   m_TagString: ShildSkill
+=======
+  - component: {fileID: 9122125236139679606}
+  - component: {fileID: 6844625533761649838}
+  m_Layer: 11
+  m_Name: ShildSkill
+  m_TagString: ShieldSkill
+>>>>>>> waves
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -647,6 +684,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &5354126918404996758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,6 +700,8 @@ MonoBehaviour:
   shlidCollider: {fileID: 746815236663609678}
   shildRenderer: {fileID: 7954305467444052350}
   ShildCooldown: 60
+=======
+>>>>>>> waves
 --- !u!54 &9122125236139679606
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -689,3 +729,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+<<<<<<< HEAD
+=======
+--- !u!114 &6844625533761649838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7308699117951135894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163dd800d259df947b97fa0ce388368d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shlidCollider: {fileID: 746815236663609678}
+  shildRenderer: {fileID: 7954305467444052350}
+  ShildCooldown: 60
+>>>>>>> waves

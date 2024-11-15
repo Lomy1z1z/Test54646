@@ -9,11 +9,12 @@ TagManager:
   - enemyBall
   - MeleeEnemy
   - BallSkill
-  - ShildSkill
   - Walls
   - exp
   - FireBullet
   - Ground
+  - ShieldSkill
+  - ShildSkill
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Player
   - MeleeEnemy
   - BallSkill
-  - ShildSkill
+  - ShieldSkill
   - Walls
   - exp
   - FireBullet

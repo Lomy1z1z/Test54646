@@ -7,11 +7,7 @@ public class BallSkill : MonoBehaviour
    public Transform target;
    public float ballSpeed;
 
-<<<<<<< HEAD
    public float raduis;
-=======
-   public float radius;
->>>>>>> waves
 
    public float angle = 0;
 
@@ -19,19 +15,11 @@ public class BallSkill : MonoBehaviour
     void Update()
     {
 
-<<<<<<< HEAD
         float x =target.position.x + Mathf.Cos(angle) * raduis;
 
         float y =target.position.y;
 
         float z =target.position.z + Mathf.Sin(angle) * raduis;
-=======
-        float x =target.position.x + Mathf.Cos(angle) * radius;
-
-        float y =target.position.y;
-
-        float z =target.position.z + Mathf.Sin(angle) * radius;
->>>>>>> waves
 
 
         transform.position = new Vector3(x,y,z);

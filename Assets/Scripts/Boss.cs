@@ -44,19 +44,11 @@ public class Boss : Enemy
 
     public void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == Bullet){
-<<<<<<< HEAD
             TakeDamage(PlayerM.instance.enemyDamege/200);
         }
 
         if(other.gameObject.tag == FireBullet){
              TakeDamage(PlayerM.instance.enemyDamege/200);
-=======
-            TakeDamage(PlayerM.instance.enemyDamage/200);
-        }
-
-        if(other.gameObject.tag == FireBullet){
-             TakeDamage(PlayerM.instance.enemyDamage/200);
->>>>>>> waves
               burnChance = UnityEngine.Random.Range(0,101);
               if(burnChance > 70 && !isOnFire){
             isOnFire = true;

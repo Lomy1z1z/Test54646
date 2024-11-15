@@ -8,9 +8,11 @@ using TMPro;
 public class Enemy : MonoBehaviour
 {
     public float dis;
+    PlayerM playerScript;
     public Transform player;
     public Image enemyHpImage;
     public float enemyHp;
+    GameMaster gm;
     public GameObject enemyBullet;
     public Transform enemyGun;
      [SerializeField] public float nextAttackTime = 0f;
@@ -51,11 +53,7 @@ public class Enemy : MonoBehaviour
 
         
 
-<<<<<<< HEAD
         GameMaster.instance.damageToPrint = PlayerM.instance.enemyDamege;
-=======
-        GameMaster.instance.damageToPrint = PlayerM.instance.enemyDamage;
->>>>>>> waves
 
         GameMaster.instance.damageText.text =  GameMaster.instance.damageToPrint.ToString();
          
@@ -117,19 +115,11 @@ public class Enemy : MonoBehaviour
 
     public void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == Bullet){
-<<<<<<< HEAD
             TakeDamage(PlayerM.instance.enemyDamege/50);
         }
 
         if(other.gameObject.tag == FireBullet){
              TakeDamage(PlayerM.instance.enemyDamege/50);
-=======
-            TakeDamage(PlayerM.instance.enemyDamage/50);
-        }
-
-        if(other.gameObject.tag == FireBullet){
-             TakeDamage(PlayerM.instance.enemyDamage/50);
->>>>>>> waves
               burnChance = UnityEngine.Random.Range(0,101);
               if(burnChance > 70 && !isOnFire){
             isOnFire = true;
@@ -143,11 +133,7 @@ public class Enemy : MonoBehaviour
 
     public void OnTriggerEnter(Collider other){
 
-<<<<<<< HEAD
         if(other.gameObject.tag == BallSkill){
-=======
-        if(other.gameObject.tag == nameof(BallSkill)){
->>>>>>> waves
             GameMaster.instance.damageText.text = ballDamagePrint.ToString();
             TakeDamage(0.2f);
         }
@@ -157,11 +143,7 @@ public class Enemy : MonoBehaviour
 
     private const string Bullet = "Bullet";
     public const string FireBullet = "FireBullet";
-<<<<<<< HEAD
     private const string BallSkill = "BallSkill";
-=======
-    //private const string BallSkill = "BallSkill";
->>>>>>> waves
 
 
     public void enemyShooting(){

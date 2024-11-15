@@ -101,8 +101,8 @@ public class WaveManeger : MonoBehaviour
                 //  Time.timeScale = 0;
                 // menuImg.SetActive(true);
                 // finish = true;
-                // SceneManager.LoadScene(2);
-                // GameMaster.instance.DestroyThyself();
+                SceneManager.LoadScene(2);
+                GameMaster.instance.DestroyThyself();
                 
                    
             }

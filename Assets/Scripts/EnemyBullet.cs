@@ -9,6 +9,8 @@ public class EnemyBullet : Bullet
     Enemy enemy;
     float lifespan;
 
+    private const int maximumLifespan = 2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class EnemyBullet : Bullet
         bulletBody.AddForce(transform.forward * enemyBulletSpeed * Time.deltaTime);
         lifespan += Time.deltaTime;
 
-          if(lifespan > 2){
+          if(lifespan > maximumLifespan){
             Destroy(gameObject);
         }
 

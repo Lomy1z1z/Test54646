@@ -29,6 +29,8 @@ public class MeleeEnemy : Enemy
     {
         
             enemyHp = enemyHpImage.fillAmount;
+             meleeEnemySpeed = 400;
+             knockForce = 1000;
        
     }
 
@@ -36,8 +38,7 @@ public class MeleeEnemy : Enemy
     void FixedUpdate()
     {
 
-        meleeEnemySpeed = 400;
-        knockForce = 1000;
+       
 
          enemyHpImage.fillAmount = enemyHp;
 

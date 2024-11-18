@@ -27,6 +27,17 @@ public class Enemy : MonoBehaviour
      public ParticleSystem fire;
 
     public int burnChance;
+
+    public const float normalEnemyDamageDivider = 50;
+
+    public const int minBurnChanceRange = 0;
+    public const int maxBurnChanceRange = 101;
+
+    public const float ballSkillDamage = 2;
+
+    public const float burnDamage = 0.05f;
+
+    public const float  burnCooldown = 6f;
      
 
      
@@ -113,12 +124,12 @@ public class Enemy : MonoBehaviour
 
     public void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == Bullet){
-            TakeDamage(PlayerM.instance.enemyDamage/50);
+            TakeDamage(PlayerM.instance.enemyDamage/normalEnemyDamageDivider);
         }
 
         if(other.gameObject.tag == FireBullet){
-             TakeDamage(PlayerM.instance.enemyDamage/50);
-              burnChance = UnityEngine.Random.Range(0,101);
+             TakeDamage(PlayerM.instance.enemyDamage/normalEnemyDamageDivider);
+              burnChance = UnityEngine.Random.Range(minBurnChanceRange,maxBurnChanceRange);
               if(burnChance > 70 && !isOnFire){
             isOnFire = true;
             fire.Play();
@@ -133,7 +144,7 @@ public class Enemy : MonoBehaviour
 
         if(other.gameObject.tag == nameof(BallSkill)){
             GameMaster.instance.damageText.text = ballDamagePrint.ToString();
-            TakeDamage(0.2f);
+            TakeDamage(ballSkillDamage);
         }
 
     }
@@ -152,13 +163,13 @@ public class Enemy : MonoBehaviour
     public IEnumerator FireDamage(){
          while(isOnFire){
         GameMaster.instance.damageText.text = fireDamagePrint.ToString();
-        TakeDamage(0.05f);
+        TakeDamage(burnDamage);
          yield return new WaitForSeconds(1f);
          }
      }
     public IEnumerator StopFire(){
         if(isOnFire){
-    yield return new WaitForSeconds(6f);
+    yield return new WaitForSeconds(burnCooldown);
     fire.Stop();
     isOnFire = false;
         }

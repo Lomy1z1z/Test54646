@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
     public const float burnDamage = 0.05f;
 
     public const float  burnCooldown = 6f;
-     public bool isPushed = false;
+     
 
      
 
@@ -103,7 +103,7 @@ public class Enemy : MonoBehaviour
     }
 
 
-    public void TakeDamage(float damage){
+    public virtual void  TakeDamage(float damage){
         enemyHp = enemyHpImage.fillAmount;
         enemyHp -= damage;
         Instantiate(dmgText,transform.position,dmgText.transform.rotation);
@@ -126,11 +126,7 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.tag == Bullet){
             TakeDamage(PlayerM.instance.enemyDamage/normalEnemyDamageDivider);
         }
-        if(gameObject.tag == "MeleeEnemy" && other.gameObject.tag == Bullet || other.gameObject.tag == FireBullet){
-
-            isPushed = true;
-
-        }
+        
 
         if(other.gameObject.tag == FireBullet){
              TakeDamage(PlayerM.instance.enemyDamage/normalEnemyDamageDivider);

@@ -14,6 +14,8 @@ public class MeleeEnemy : Enemy
      
        private float knockTime = 0.15f;
 
+       public bool isPushed = false;
+
     
 
      
@@ -100,6 +102,13 @@ public class MeleeEnemy : Enemy
      IEnumerator Reset(){
          yield return new WaitForSeconds(knockTime);
          isPushed = false;
+     }
+
+     public override void TakeDamage(float damage){
+
+      base.TakeDamage(damage);
+      isPushed = true;
+      
      }
 
      

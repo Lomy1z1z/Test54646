@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
     public const float burnDamage = 0.05f;
 
     public const float  burnCooldown = 6f;
-     
+     public bool isPushed = false;
 
      
 
@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyHp = enemyHpImage.fillAmount;
+       enemyHpImage.fillAmount = enemyHp;
 
         
 
@@ -104,12 +104,12 @@ public class Enemy : MonoBehaviour
 
 
     public void TakeDamage(float damage){
+        enemyHp = enemyHpImage.fillAmount;
         enemyHp -= damage;
         Instantiate(dmgText,transform.position,dmgText.transform.rotation);
         if(enemyHp <= 0)
         {
             Destroy(gameObject);
-            //GameMaster.instance.exp += 1f;
          }
 
         
@@ -125,6 +125,11 @@ public class Enemy : MonoBehaviour
     public void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == Bullet){
             TakeDamage(PlayerM.instance.enemyDamage/normalEnemyDamageDivider);
+        }
+        if(gameObject.tag == "MeleeEnemy" && other.gameObject.tag == Bullet || other.gameObject.tag == FireBullet){
+
+            isPushed = true;
+
         }
 
         if(other.gameObject.tag == FireBullet){

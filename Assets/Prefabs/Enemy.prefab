@@ -5032,7 +5032,7 @@ MonoBehaviour:
   dis: 0
   player: {fileID: 0}
   enemyHpImage: {fileID: 5600552138140141066}
-  enemyHp: 0
+  enemyHp: 100
   enemyBullet: {fileID: 5049743195724932362, guid: 132f9724b84fb2345b601eac0349028b, type: 3}
   enemyGun: {fileID: 4566454432338221675}
   nextAttackTime: 0

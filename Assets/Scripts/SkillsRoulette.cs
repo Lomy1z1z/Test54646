@@ -14,10 +14,6 @@ public class SkillRollete : MonoBehaviour
     public GameObject ballSkillPick;
     public GameObject shieldSkillPick;
 
-    // public GameObject ballSkill;
-
-    // public GameObject shildSkill;
-
     public GameObject rollAlert;
 
     public GameObject continueAlert;
@@ -32,19 +28,6 @@ public class SkillRollete : MonoBehaviour
 
     
 
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
 
 public void PlayRollete(){
     if(!isRolled){

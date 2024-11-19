@@ -239,7 +239,7 @@ MonoBehaviour:
   dis: 0
   player: {fileID: 0}
   enemyHpImage: {fileID: 7411716300924771030}
-  enemyHp: 0
+  enemyHp: 100
   enemyBullet: {fileID: 0}
   enemyGun: {fileID: 0}
   nextAttackTime: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   fire: {fileID: 5597871475530759105}
   burnChance: 0
   meleeEnemyBody: {fileID: 8633099002706248473}
-  MeleeEnemySpeed: 5
+  meleeEnemySpeed: 0
   knockForce: 0
   isPushed: 0
 --- !u!1 &4636362993166431627

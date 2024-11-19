@@ -12,13 +12,15 @@ public class Bullet : MonoBehaviour
 
     //public ParticleSystem fire;
     public static Bullet instance; 
+
+    public const float bulletDestroyDelay = 1;
     // Start is called before the first frame update
     void Start()
     {
 
         
         instance = this;
-        Destroy(gameObject,1f);
+        Destroy(gameObject,bulletDestroyDelay);
 
         
     }

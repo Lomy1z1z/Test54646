@@ -6,7 +6,7 @@ public class DestrroyExp : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private const float objectDestroyDelay = 0.1f;
+     [SerializeField] float objectDestroyDelay = 0.1f;
     void Start()
     {
         Destroy(gameObject,objectDestroyDelay );

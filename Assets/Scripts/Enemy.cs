@@ -38,6 +38,8 @@ public class Enemy : MonoBehaviour
     public const float burnDamage = 0.05f;
 
     public const float  burnCooldown = 6f;
+
+    public float maxHp;
      
 
      
@@ -54,7 +56,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       enemyHpImage.fillAmount = enemyHp;
+       enemyHp = maxHp;
 
         
 
@@ -76,8 +78,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
          
-        enemyHpImage.fillAmount = enemyHp;
-        //  dis  = Vector3.Distance(transform.position,player.position);
+       
          
          transform.LookAt(GameMaster.instance.playerTransform.position);
          
@@ -87,7 +88,7 @@ public class Enemy : MonoBehaviour
          }
 
         
-
+         
 
          
 
@@ -104,8 +105,8 @@ public class Enemy : MonoBehaviour
 
 
     public virtual void  TakeDamage(float damage){
-        enemyHp = enemyHpImage.fillAmount;
         enemyHp -= damage;
+         enemyHpImage.fillAmount = enemyHp/maxHp;
         Instantiate(dmgText,transform.position,dmgText.transform.rotation);
         if(enemyHp <= 0)
         {
@@ -124,12 +125,12 @@ public class Enemy : MonoBehaviour
 
     public void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == Bullet){
-            TakeDamage(PlayerM.instance.enemyDamage/normalEnemyDamageDivider);
+            TakeDamage(PlayerM.instance.enemyDamage);
         }
         
 
         if(other.gameObject.tag == FireBullet){
-             TakeDamage(PlayerM.instance.enemyDamage/normalEnemyDamageDivider);
+             TakeDamage(PlayerM.instance.enemyDamage);
               burnChance = UnityEngine.Random.Range(minBurnChanceRange,maxBurnChanceRange);
               if(burnChance > 70 && !isOnFire){
             isOnFire = true;

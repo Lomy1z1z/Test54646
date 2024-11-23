@@ -42,8 +42,8 @@ public void PlayRollete(){
      PlayerM.instance.maxDamage += 3;
      GameMaster.instance.damageToPrint = PlayerM.instance.enemyDamage * 10;
      GameMaster.instance.damageText.text = GameMaster.instance.damageToPrint.ToString();
-     GameMaster.instance.data.minDamagedata = PlayerM.instance.minDamage;
-     GameMaster.instance.data.maxDamagedata = PlayerM.instance.maxDamage;
+     GameMaster.instance.data.minDamageData = PlayerM.instance.minDamage;
+     GameMaster.instance.data.maxDamageData = PlayerM.instance.maxDamage;
     break;
   case 1:
     CurrentSkill = skills[1];

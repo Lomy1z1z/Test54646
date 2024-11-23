@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6143047485083850322}
   - component: {fileID: 5600552138140141066}
   m_Layer: 5
-  m_Name: HP
+  m_Name: HPFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5044,6 +5044,7 @@ MonoBehaviour:
   isOnFire: 0
   fire: {fileID: 3875415380888648463}
   burnChance: 0
+  maxHp: 30
 --- !u!1 &7975960135464900102
 GameObject:
   m_ObjectHideFlags: 0

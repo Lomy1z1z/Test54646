@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
     //public ParticleSystem fire;
     public static Bullet instance; 
 
-    public const float bulletDestroyDelay = 1;
+    [SerializeField] float bulletDestroyDelay = 1;
     // Start is called before the first frame update
     void Start()
     {

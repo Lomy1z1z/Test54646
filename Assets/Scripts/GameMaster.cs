@@ -135,7 +135,20 @@ public class GameMaster : MonoBehaviour
      }
 
      public void RestartLevel(){
-        RestCharacterStats();
+        ResetCharacterStats();
+        // WaveManeger.instance.StartCoroutine(WaveManeger.instance.WaveDelay());
+        // WaveManeger.instance.currentWave = 0;
+        //     GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+        // foreach(GameObject go in gos)
+        //  Destroy(go);
+        //  for(int i = 0; i < WaveManeger.instance.wave.waves.Count; i ++){
+        //      WaveManeger.instance.wave.waves[i].IsCompleted = false;
+        //  }
+         
+      
+      
+        
+
         SceneManager.LoadScene(1);
          DestroyThyself();
      }
@@ -165,11 +178,11 @@ public class GameMaster : MonoBehaviour
 
      }
 
-     public void RestCharacterStats(){
+     public void ResetCharacterStats(){
          data.levelData = 1;
 
-    data.minDamagedata = 1;
-    data.maxDamagedata = 10;
+    data.minDamageData = 1;
+    data.maxDamageData = 10;
 
     data.hpImageData =  0.3f;
     data.hpBackGroundImageData =  0.3f;

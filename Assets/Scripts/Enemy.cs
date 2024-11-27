@@ -27,6 +27,19 @@ public class Enemy : MonoBehaviour
      public ParticleSystem fire;
 
     public int burnChance;
+
+    public const float normalEnemyDamageDivider = 50;
+
+    public const int minBurnChanceRange = 0;
+    public const int maxBurnChanceRange = 101;
+
+    public const float ballSkillDamage = 2;
+
+    public const float burnDamage = 0.05f;
+
+    public const float  burnCooldown = 6f;
+
+    public float maxHp;
      
 
      
@@ -43,7 +56,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyHp = enemyHpImage.fillAmount;
+       enemyHp = maxHp;
 
         
 
@@ -65,8 +78,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
          
-        enemyHpImage.fillAmount = enemyHp;
-        //  dis  = Vector3.Distance(transform.position,player.position);
+       
          
          transform.LookAt(GameMaster.instance.playerTransform.position);
          
@@ -76,7 +88,7 @@ public class Enemy : MonoBehaviour
          }
 
         
-
+         
 
          
 
@@ -92,13 +104,13 @@ public class Enemy : MonoBehaviour
     }
 
 
-    public void TakeDamage(float damage){
+    public virtual void  TakeDamage(float damage){
         enemyHp -= damage;
+         enemyHpImage.fillAmount = enemyHp/maxHp;
         Instantiate(dmgText,transform.position,dmgText.transform.rotation);
         if(enemyHp <= 0)
         {
             Destroy(gameObject);
-            //GameMaster.instance.exp += 1f;
          }
 
         
@@ -113,12 +125,13 @@ public class Enemy : MonoBehaviour
 
     public void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == Bullet){
-            TakeDamage(PlayerM.instance.enemyDamage/50);
+            TakeDamage(PlayerM.instance.enemyDamage);
         }
+        
 
         if(other.gameObject.tag == FireBullet){
-             TakeDamage(PlayerM.instance.enemyDamage/50);
-              burnChance = UnityEngine.Random.Range(0,101);
+             TakeDamage(PlayerM.instance.enemyDamage);
+              burnChance = UnityEngine.Random.Range(minBurnChanceRange,maxBurnChanceRange);
               if(burnChance > 70 && !isOnFire){
             isOnFire = true;
             fire.Play();
@@ -133,7 +146,7 @@ public class Enemy : MonoBehaviour
 
         if(other.gameObject.tag == nameof(BallSkill)){
             GameMaster.instance.damageText.text = ballDamagePrint.ToString();
-            TakeDamage(0.2f);
+            TakeDamage(ballSkillDamage);
         }
 
     }
@@ -152,13 +165,13 @@ public class Enemy : MonoBehaviour
     public IEnumerator FireDamage(){
          while(isOnFire){
         GameMaster.instance.damageText.text = fireDamagePrint.ToString();
-        TakeDamage(0.05f);
+        TakeDamage(burnDamage);
          yield return new WaitForSeconds(1f);
          }
      }
     public IEnumerator StopFire(){
         if(isOnFire){
-    yield return new WaitForSeconds(6f);
+    yield return new WaitForSeconds(burnCooldown);
     fire.Stop();
     isOnFire = false;
         }

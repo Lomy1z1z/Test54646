@@ -146,8 +146,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dfd47ad90124b04aa0592e3820faf97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 4834822376901915467}
   bulletSpeed: 10
   playerPos: {fileID: 0}
   tags: []
+  bulletBody: {fileID: 4834822376901915467}
   enemyBulletSpeed: 1500
+  enemy: {fileID: 9218089764621651486, guid: 692cc4cb95d45414c8b5b96c1f6eaba6, type: 3}

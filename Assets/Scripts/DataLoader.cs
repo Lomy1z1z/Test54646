@@ -31,8 +31,8 @@ public class DataLoader : MonoBehaviour
   
         
         GameMaster.instance.level = data.levelData;
-        PlayerM.instance.minDamage = data.minDamagedata;
-        PlayerM.instance.maxDamage = data.maxDamagedata;
+        PlayerM.instance.minDamage = data.minDamageData;
+        PlayerM.instance.maxDamage = data.maxDamageData;
         PlayerM.instance.hpImage.fillAmount = data.hpImageData;
         PlayerM.instance.hpImageBackground.fillAmount = data.hpBackGroundImageData;
         PlayerM.instance.hp = data.hpData;

@@ -45,6 +45,8 @@ public class PlayerM : MonoBehaviour
 
      public GameObject regulerBullet;
 
+     public const float hitInvisibilityResrt = 0.5f;
+
      
 
      
@@ -228,7 +230,7 @@ public class PlayerM : MonoBehaviour
     private const string MeleeEnemy = "MeleeEnemy";
 
  IEnumerator ResetHit(){
-         yield return new WaitForSeconds(0.5f);
+         yield return new WaitForSeconds(hitInvisibilityResrt);
           Visible.SetColor("_Color", Color.blue);
           isVisble = true;
          

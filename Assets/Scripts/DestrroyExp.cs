@@ -5,9 +5,11 @@ using UnityEngine;
 public class DestrroyExp : MonoBehaviour
 {
     // Start is called before the first frame update
+
+     [SerializeField] float objectDestroyDelay = 0.1f;
     void Start()
     {
-        Destroy(gameObject,0.1f);
+        Destroy(gameObject,objectDestroyDelay );
     }
 
     // Update is called once per frame

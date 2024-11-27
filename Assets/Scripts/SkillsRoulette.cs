@@ -14,10 +14,6 @@ public class SkillRollete : MonoBehaviour
     public GameObject ballSkillPick;
     public GameObject shieldSkillPick;
 
-    // public GameObject ballSkill;
-
-    // public GameObject shildSkill;
-
     public GameObject rollAlert;
 
     public GameObject continueAlert;
@@ -32,19 +28,6 @@ public class SkillRollete : MonoBehaviour
 
     
 
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
 
 public void PlayRollete(){
     if(!isRolled){
@@ -59,8 +42,8 @@ public void PlayRollete(){
      PlayerM.instance.maxDamage += 3;
      GameMaster.instance.damageToPrint = PlayerM.instance.enemyDamage * 10;
      GameMaster.instance.damageText.text = GameMaster.instance.damageToPrint.ToString();
-     GameMaster.instance.data.minDamagedata = PlayerM.instance.minDamage;
-     GameMaster.instance.data.maxDamagedata = PlayerM.instance.maxDamage;
+     GameMaster.instance.data.minDamageData = PlayerM.instance.minDamage;
+     GameMaster.instance.data.maxDamageData = PlayerM.instance.maxDamage;
     break;
   case 1:
     CurrentSkill = skills[1];

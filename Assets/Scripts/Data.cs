@@ -13,8 +13,8 @@ public class Data : ScriptableObject
 {
    public int levelData = GameMaster.instance.level;
 
-   public float minDamagedata = PlayerM.instance.minDamage;
-   public float maxDamagedata = PlayerM.instance.maxDamage;
+   public float minDamageData = PlayerM.instance.minDamage;
+   public float maxDamageData = PlayerM.instance.maxDamage;
 
    public float hpImageData =  PlayerM.instance.hpImage.fillAmount;
    public float hpBackGroundImageData =  PlayerM.instance.hpImageBackground.fillAmount;
@@ -30,6 +30,8 @@ public class Data : ScriptableObject
 
    public bool ballSkillData;
    public bool shieldSkillData;
+
+   
 
    
    

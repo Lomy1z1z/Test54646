@@ -10,13 +10,6 @@ public class ExpSparkle : MonoBehaviour
     public float sparkleSpeed = 1000;
     
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-        
-    }
-
     // Update is called once per frame
     void Update()
     {

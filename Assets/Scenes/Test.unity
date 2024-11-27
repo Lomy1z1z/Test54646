@@ -467,11 +467,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72819660}
   m_CullTransparentMesh: 1
---- !u!1 &75498824 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7308699117951135894, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
-  m_PrefabInstance: {fileID: 9105917855249433325}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &75825151
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1079,7 +1074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1513,7 +1508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1897,7 +1892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2142,7 +2137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2293,7 +2288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2426,7 +2421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2843,7 +2838,7 @@ GameObject:
   - component: {fileID: 540465731}
   - component: {fileID: 540465730}
   m_Layer: 5
-  m_Name: ShildSkillImage
+  m_Name: ShieldSkillImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3174,7 +3169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5592,6 +5587,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008269572}
   m_CullTransparentMesh: 1
+--- !u!1 &1043842060 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2427993219103948161, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+  m_PrefabInstance: {fileID: 9105917855249433325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1043842061
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043842060}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: db35cdaa7defb7242b48df42f36db91c, type: 3}
+  m_Controller: {fileID: 9100000, guid: 344bd16cda00b384cb4adcb75f39df18, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1094222803
 GameObject:
   m_ObjectHideFlags: 3
@@ -6084,7 +6105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6370,7 +6391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7081,6 +7102,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 503119854}
     m_Modifications:
+    - target: {fileID: 2929252283123773937, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7777,6 +7802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deeb54b3bc63e07448c026dd7a4c0096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectDestroyDelay: 0.1
 --- !u!1 &1838392723
 GameObject:
   m_ObjectHideFlags: 0
@@ -8160,11 +8186,11 @@ MonoBehaviour:
   textSP: {fileID: 812979884}
   damageToPrint: 0
   damageText: {fileID: 7555162850091905558, guid: 4be2c277bf65f0b43b624c03825002f6, type: 3}
-  sparkleExpAmount: 2
+  sparkleExpAmount: 3
   bombTransform: {fileID: 0}
   data: {fileID: 11400000, guid: 39a41cb3c6a199846912536790d7d719, type: 2}
   ballSkill: {fileID: 1694525717}
-  shieldSkill: {fileID: 75498824}
+  shieldSkill: {fileID: 2050676783}
 --- !u!4 &1890805767
 Transform:
   m_ObjectHideFlags: 0
@@ -8604,7 +8630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8677,7 +8703,7 @@ MonoBehaviour:
   fireBulletPick: {fileID: 1301258450}
   TripleShotPick: {fileID: 1740051363}
   ballSkillPick: {fileID: 1788954275}
-  shieldSkillPick: {fileID: 0}
+  shieldSkillPick: {fileID: 1709255331}
   rollAlert: {fileID: 1304998171}
   continueAlert: {fileID: 94526304}
   isFireBall: 0
@@ -8987,6 +9013,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2050676783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7308699117951135894, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+  m_PrefabInstance: {fileID: 9105917855249433325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &2050676787 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 746815236663609678, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+  m_PrefabInstance: {fileID: 9105917855249433325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2050676788 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7954305467444052350, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+  m_PrefabInstance: {fileID: 9105917855249433325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3528006127955290436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9161,10 +9202,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallSkill
       objectReference: {fileID: 0}
+    - target: {fileID: 3104152780516175365, guid: f00c5ed989c14484086c00690b2570cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620903543586672814, guid: f00c5ed989c14484086c00690b2570cd, type: 3}
+      propertyPath: radius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3620903543586672814, guid: f00c5ed989c14484086c00690b2570cd, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 810786028}
+    - target: {fileID: 3620903543586672814, guid: f00c5ed989c14484086c00690b2570cd, type: 3}
+      propertyPath: ballSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3874988037222684117, guid: f00c5ed989c14484086c00690b2570cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.909971
@@ -9222,6 +9275,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2427993219103948161, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427993219103948161, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921426507091206473, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6622587146306523480, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.91
@@ -9262,6 +9327,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6844625533761649838, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: shieldCollider
+      value: 
+      objectReference: {fileID: 2050676787}
+    - target: {fileID: 6844625533761649838, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: shieldRenderer
+      value: 
+      objectReference: {fileID: 2050676788}
+    - target: {fileID: 6889323251190673796, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e19a8f1294c8ecf4492c251a328e8b8d, type: 2}
     - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
       propertyPath: cam
       value: 
@@ -9275,17 +9352,54 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 396809159}
     - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1043842061}
+    - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: invisble
+      value: 
+      objectReference: {fileID: 2100000, guid: e19a8f1294c8ecf4492c251a328e8b8d, type: 2}
+    - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1589249711}
     - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: runspeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: attackRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: fireBullet
+      value: 
+      objectReference: {fileID: 3540496837989767626, guid: 5cf984241d6c09a4db269c8af7c095d4, type: 3}
+    - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: enemyDamege
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6910797914462337223, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
       propertyPath: hpImageBackground
       value: 
       objectReference: {fileID: 72819662}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    - target: {fileID: 7308699117951135894, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      propertyPath: m_Name
+      value: ShieldSkill
+      objectReference: {fileID: 0}
+    - target: {fileID: 2788977548694597970, guid: fb54766722d9ab046a6e6e35b5e61ea2, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1589249711}
+    m_RemovedComponents:
+    - {fileID: 2788977548694597970, guid: fb54766722d9ab046a6e6e35b5e61ea2, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 2243156961165901923, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2427993219103948161, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1043842061}
   m_SourcePrefab: {fileID: 100100000, guid: 740d9537bb812864fb7d078d855c8e31, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

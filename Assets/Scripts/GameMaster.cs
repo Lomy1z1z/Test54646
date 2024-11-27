@@ -38,6 +38,8 @@ public class GameMaster : MonoBehaviour
 
     public GameObject shieldSkill;
 
+    public const float reduceExpAmountPerLevel = 0.05f;
+
      
 
      
@@ -127,28 +129,26 @@ public class GameMaster : MonoBehaviour
           Time.timeScale = 0;
           skillPoints +=1;
           exp = 0;
-          sparkleExpAmount -= 0.05f;
+          sparkleExpAmount -= reduceExpAmountPerLevel;
           
 
      }
 
      public void RestartLevel(){
-         data.levelData = 1;
+        ResetCharacterStats();
+        // WaveManeger.instance.StartCoroutine(WaveManeger.instance.WaveDelay());
+        // WaveManeger.instance.currentWave = 0;
+        //     GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+        // foreach(GameObject go in gos)
+        //  Destroy(go);
+        //  for(int i = 0; i < WaveManeger.instance.wave.waves.Count; i ++){
+        //      WaveManeger.instance.wave.waves[i].IsCompleted = false;
+        //  }
+         
+      
+      
+        
 
-    data.minDamagedata = 1;
-    data.maxDamagedata = 10;
-
-    data.hpImageData =  0.3f;
-    data.hpBackGroundImageData =  0.3f;
-    data.hpData = 30f;
-
-    data.runSpeedData = 25f;
-
-   data.attackRateData = 0.1f;
-   data.shieldSkillData = false;
-   data.ballSkillData = false;
-   data.tripleShootData = false;
-   data.bulletTypeData = PlayerM.instance.bullet;
         SceneManager.LoadScene(1);
          DestroyThyself();
      }
@@ -158,22 +158,7 @@ public class GameMaster : MonoBehaviour
         WaveManeger.instance.menuImg.SetActive(true);
      }
      public void ReturnToLobby(){
-         data.levelData = 1;
-
-    data.minDamagedata = 1;
-    data.maxDamagedata = 10;
-
-    data.hpImageData =  0.3f;
-    data.hpBackGroundImageData =  0.3f;
-    data.hpData = 30f;
-
-    data.runSpeedData = 25f;
-
-   data.attackRateData = 0.1f;
-   data.shieldSkillData = false;
-   data.ballSkillData = false;
-   data.tripleShootData = false;
-   data.bulletTypeData = PlayerM.instance.bullet;
+        
         SceneManager.LoadScene(0);
         DestroyThyself();
         
@@ -191,6 +176,25 @@ public class GameMaster : MonoBehaviour
 
         window.SetActive(false);
 
+     }
+
+     public void ResetCharacterStats(){
+         data.levelData = 1;
+
+    data.minDamageData = 1;
+    data.maxDamageData = 10;
+
+    data.hpImageData =  0.3f;
+    data.hpBackGroundImageData =  0.3f;
+    data.hpData = 30f;
+
+    data.runSpeedData = 25f;
+
+   data.attackRateData = 0.1f;
+   data.shieldSkillData = false;
+   data.ballSkillData = false;
+   data.tripleShootData = false;
+   data.bulletTypeData = PlayerM.instance.bullet;
      }
 
 

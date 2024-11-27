@@ -27,6 +27,7 @@ public class WaveManeger : MonoBehaviour
 
     public bool finish;
     
+    
 
     
      
@@ -56,20 +57,6 @@ public class WaveManeger : MonoBehaviour
      
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
-   
-       
-
-
-
-    }
-
-
 
 
     public void WaveSystem(){
@@ -110,7 +97,7 @@ public class WaveManeger : MonoBehaviour
 
     }
 
-    IEnumerator WaveDelay(){
+    public IEnumerator WaveDelay(){
          yield return new WaitForSeconds(waveWaitTime);
          WaveSystem();
          

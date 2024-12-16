@@ -117,8 +117,11 @@ public class Enemy : MonoBehaviour
     }
 
    public void OnDestroy(){
+   
     OnDeath?.Invoke(this);
+     if(WaveManeger.instance.reLevel == false){
      Instantiate(expSparkle,transform.position,expSparkle.transform.rotation);
+    }
       
    }
     

@@ -30,8 +30,6 @@ public class GameMaster : MonoBehaviour
 
      public float sparkleExpAmount = 0.35f;
 
-     public Transform bombTransform;
-
      public Data data;
 
      public GameObject ballSkill;
@@ -39,6 +37,15 @@ public class GameMaster : MonoBehaviour
     public GameObject shieldSkill;
 
     public const float reduceExpAmountPerLevel = 0.05f;
+    public GameData inGameData;
+
+    public GameObject bulletType;
+
+    public Transform playerStartPos;
+
+   
+
+
 
      
 
@@ -70,6 +77,7 @@ public class GameMaster : MonoBehaviour
             DontDestroyOnLoad(this);
             instance = this;
         }
+
     }
 
     // Start is called before the first frame update
@@ -77,9 +85,22 @@ public class GameMaster : MonoBehaviour
     {
 
 
-        Time.timeScale = 1;
 
-        level = data.levelData;
+
+        Time.timeScale = 1;
+        ResetCharacterStats();
+        
+        level = inGameData.levelData;
+
+        playerTransform = PlayerM.instance.transform;
+
+        
+        
+
+
+        // Limit framerate to cinematic 24fps.
+        QualitySettings.vSyncCount = 0; // Set vSyncCount to 0 so that using .targetFrameRate is enabled.
+        Application.targetFrameRate = 120;
        
     }
 
@@ -93,7 +114,7 @@ public class GameMaster : MonoBehaviour
 
         if(exp >= 1){
             LevelUp();
-             data.levelData = level; 
+            // data.levelData = level; 
         }
 
        
@@ -134,24 +155,38 @@ public class GameMaster : MonoBehaviour
 
      }
 
-     public void RestartLevel(){
-        ResetCharacterStats();
-        // WaveManeger.instance.StartCoroutine(WaveManeger.instance.WaveDelay());
-        // WaveManeger.instance.currentWave = 0;
-        //     GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
-        // foreach(GameObject go in gos)
-        //  Destroy(go);
-        //  for(int i = 0; i < WaveManeger.instance.wave.waves.Count; i ++){
-        //      WaveManeger.instance.wave.waves[i].IsCompleted = false;
-        //  }
-         
-      
-      
-        
+    public void RestartLevel(){
+    ResetCharacterStats();
+    WaveManeger.instance.reLevel = true;
+    StartCoroutine(WaveManeger.instance.ResetGame());
+    level = inGameData.levelData;
+    PlayerM.instance.transform.position = playerStartPos.position;
+    WaveManeger.instance.StartCoroutine(WaveManeger.instance.WaveDelay());
+    WaveManeger.instance.currentWave = 0;
+    WaveManeger.instance.waveNum = 1;
+    WaveManeger.instance.waveNumText.text =   WaveManeger.instance.waveNum.ToString();
+     WaveManeger.instance.menuImg.SetActive(false);
+     Time.timeScale = 1;
 
-        SceneManager.LoadScene(1);
-         DestroyThyself();
-     }
+    
+    string[] tagsToDestroy = new string[] { "Enemy", "MeleeEnemy", "enemyBall","Bullet","FireBullet","exp" };
+
+    
+    foreach (string tag in tagsToDestroy)
+    {
+        GameObject[] gos = GameObject.FindGameObjectsWithTag(tag);
+        foreach (GameObject go in gos)
+        {
+            Destroy(go);
+        }
+    }
+
+    
+    for (int i = 0; i < WaveManeger.instance.wave.waves.Count; i++)
+    {
+        WaveManeger.instance.wave.waves[i].IsCompleted = false;
+    }
+}
 
      public void MenuBotton(){
         Time.timeScale = 0;
@@ -178,24 +213,10 @@ public class GameMaster : MonoBehaviour
 
      }
 
-     public void ResetCharacterStats(){
-         data.levelData = 1;
-
-    data.minDamageData = 1;
-    data.maxDamageData = 10;
-
-    data.hpImageData =  0.3f;
-    data.hpBackGroundImageData =  0.3f;
-    data.hpData = 30f;
-
-    data.runSpeedData = 25f;
-
-   data.attackRateData = 0.1f;
-   data.shieldSkillData = false;
-   data.ballSkillData = false;
-   data.tripleShootData = false;
-   data.bulletTypeData = PlayerM.instance.bullet;
-     }
+      public void ResetCharacterStats(){
+        inGameData = data.GetGameData();
+        bulletType = data.bulletTypeData;
+    }
 
 
     

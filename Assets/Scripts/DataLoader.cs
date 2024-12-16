@@ -30,18 +30,18 @@ public class DataLoader : MonoBehaviour
     {
   
         
-        GameMaster.instance.level = data.levelData;
-        PlayerM.instance.minDamage = data.minDamageData;
-        PlayerM.instance.maxDamage = data.maxDamageData;
-        PlayerM.instance.hpImage.fillAmount = data.hpImageData;
-        PlayerM.instance.hpImageBackground.fillAmount = data.hpBackGroundImageData;
-        PlayerM.instance.hp = data.hpData;
-        PlayerM.instance.runspeed = data.runSpeedData;
-        PlayerM.instance.attackRate = data.attackRateData;
-        PlayerM.instance.bullet = data.bulletTypeData;
-        PlayerM.instance.tripleShot = data.tripleShootData;
-        GameMaster.instance.shieldSkill.SetActive(data.shieldSkillData);
-        GameMaster.instance.ballSkill.SetActive(data.ballSkillData);
+        //GameMaster.instance.level = data.levelData;
+        //PlayerM.instance.minDamage = data.minDamageData;
+        //PlayerM.instance.maxDamage = data.maxDamageData;
+        //PlayerM.instance.hpImage.fillAmount = data.hpImageData;
+        //PlayerM.instance.hpImageBackground.fillAmount = data.hpBackGroundImageData;
+        //PlayerM.instance.hp = data.hpData;
+        //PlayerM.instance.runspeed = data.runSpeedData;
+        //PlayerM.instance.attackRate = data.attackRateData;
+        //PlayerM.instance.bullet = data.bulletTypeData;
+        //PlayerM.instance.tripleShot = data.tripleShootData;
+        //GameMaster.instance.shieldSkill.SetActive(data.shieldSkillData);
+        //GameMaster.instance.ballSkill.SetActive(data.ballSkillData);
     }
 
     

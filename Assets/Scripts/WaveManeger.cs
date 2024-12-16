@@ -26,6 +26,8 @@ public class WaveManeger : MonoBehaviour
 
 
     public bool finish;
+
+    public bool reLevel;
     
     
 
@@ -76,7 +78,7 @@ public class WaveManeger : MonoBehaviour
         enemies.Remove(enemy);
         enemiesRemaning = enemies.Count;
         enemytext.text = enemiesRemaning.ToString();
-        if (enemies.Count == 0){
+        if (enemies.Count == 0 && reLevel == false){
             wave.waves[currentWave].IsCompleted = true;
             currentWave++;
             if(wave.waves.Count > currentWave){
@@ -85,13 +87,9 @@ public class WaveManeger : MonoBehaviour
     
             }
             else{
-                //  Time.timeScale = 0;
-                // menuImg.SetActive(true);
-                // finish = true;
-                SceneManager.LoadScene(2);
-                GameMaster.instance.DestroyThyself();
-                
-                   
+                  Time.timeScale = 0;
+                 menuImg.SetActive(true);
+                 finish = true;
             }
         }
 
@@ -100,6 +98,11 @@ public class WaveManeger : MonoBehaviour
     public IEnumerator WaveDelay(){
          yield return new WaitForSeconds(waveWaitTime);
          WaveSystem();
+         
+     }
+    public IEnumerator ResetGame(){
+         yield return new WaitForSeconds(0.1f);
+         reLevel = false;
          
      }
 

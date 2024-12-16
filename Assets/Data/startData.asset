@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0580600667908064c96168e9dcc55e85, type: 3}
+  m_Name: startData
+  m_EditorClassIdentifier: 
+  expImageData: {fileID: 5768638915611485167, guid: 54f5ab7e6e06595408873a18c3a551c9, type: 3}
+  expData: 0
+  levelTextData: {fileID: 0}
+  levelData: 1
+  skillPickData: {fileID: 0}
+  skillPointsData: 0
+  camData: {fileID: 0}
+  textSPData: {fileID: 0}
+  damageToPrintData: 0
+  damageTextData: {fileID: 0}
+  sparkleExpAmountData: 0
+  ballSkillData: {fileID: 0}
+  shieldSkillData: {fileID: 0}
+  reduceExpAmountPerLevelData: 0
+  bulletTypeData: {fileID: 0}

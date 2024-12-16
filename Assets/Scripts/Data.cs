@@ -11,26 +11,16 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "SaveData", menuName = "GameData")]
 public class Data : ScriptableObject
 {
-   public int levelData = GameMaster.instance.level;
+   [SerializeField] private GameData gameData;
 
-   public float minDamageData = PlayerM.instance.minDamage;
-   public float maxDamageData = PlayerM.instance.maxDamage;
+    public GameObject bulletTypeData;
 
-   public float hpImageData =  PlayerM.instance.hpImage.fillAmount;
-   public float hpBackGroundImageData =  PlayerM.instance.hpImageBackground.fillAmount;
-   public float hpData = PlayerM.instance.hp;
-
-   public float runSpeedData = PlayerM.instance.runspeed;
-
-   public float attackRateData = PlayerM.instance.attackRate;
-
-   public GameObject bulletTypeData;
-
-   public bool tripleShootData;
-
-   public bool ballSkillData;
-   public bool shieldSkillData;
-
+    public GameData GetGameData()
+    {
+        string json = JsonUtility.ToJson(gameData);
+        GameData newData = JsonUtility.FromJson<GameData>(json);
+        return newData;
+    }
    
 
    
@@ -39,3 +29,23 @@ public class Data : ScriptableObject
       
    
 }
+[Serializable]
+public class GameData{
+    public int levelData;
+
+   public float minDamageData;
+   public float maxDamageData;
+
+   public float hpImageData;
+   public float hpBackGroundImageData;
+   public float hpData;
+
+   public float runSpeedData;
+
+   public float attackRateData;
+
+   public bool tripleShootData;
+
+   public bool ballSkillData;
+   public bool shieldSkillData;
+   }

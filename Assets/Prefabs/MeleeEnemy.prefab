@@ -239,7 +239,7 @@ MonoBehaviour:
   dis: 0
   player: {fileID: 0}
   enemyHpImage: {fileID: 7411716300924771030}
-  enemyHp: 100
+  enemyHp: 30
   enemyBullet: {fileID: 0}
   enemyGun: {fileID: 0}
   nextAttackTime: 0

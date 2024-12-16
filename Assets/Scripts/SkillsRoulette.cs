@@ -42,26 +42,26 @@ public void PlayRollete(){
      PlayerM.instance.maxDamage += 3;
      GameMaster.instance.damageToPrint = PlayerM.instance.enemyDamage * 10;
      GameMaster.instance.damageText.text = GameMaster.instance.damageToPrint.ToString();
-     GameMaster.instance.data.minDamageData = PlayerM.instance.minDamage;
-     GameMaster.instance.data.maxDamageData = PlayerM.instance.maxDamage;
+     GameMaster.instance.inGameData.minDamageData = PlayerM.instance.minDamage;
+     GameMaster.instance.inGameData.maxDamageData = PlayerM.instance.maxDamage;
     break;
   case 1:
     CurrentSkill = skills[1];
      PlayerM.instance.hpImage.fillAmount += 0.1f;
      PlayerM.instance.hpImageBackground.fillAmount += 0.1f;
      PlayerM.instance.hp += 10;
-     GameMaster.instance.data.hpImageData =  PlayerM.instance.hpImage.fillAmount;
-     GameMaster.instance.data.hpBackGroundImageData =  PlayerM.instance.hpImageBackground.fillAmount;
-     GameMaster.instance.data.hpData =  PlayerM.instance.hp;
+     GameMaster.instance.inGameData.hpImageData =  PlayerM.instance.hpImage.fillAmount;
+     GameMaster.instance.inGameData.hpBackGroundImageData =  PlayerM.instance.hpImageBackground.fillAmount;
+     GameMaster.instance.inGameData.hpData =  PlayerM.instance.hp;
     break;
   case 2:
     CurrentSkill = skills[2];
     PlayerM.instance.runspeed +=3;
-     GameMaster.instance.data.runSpeedData =  PlayerM.instance.runspeed;
+     GameMaster.instance.inGameData.runSpeedData =  PlayerM.instance.runspeed;
     break;
   case 3:
    CurrentSkill = skills[3];
-   GameMaster.instance.data.attackRateData = PlayerM.instance.attackRate;
+   GameMaster.instance.inGameData.attackRateData = PlayerM.instance.attackRate;
    PlayerM.instance.attackRate +=1;
    
    shootAnim += 0.5f;
@@ -111,7 +111,7 @@ public void FrieBulletSkill(){
     PlayerM.instance.bullet = PlayerM.instance.fireBullet;
     GameMaster.instance.skillPoints -=1;
     isFireBall = true;
-    GameMaster.instance.data.bulletTypeData = PlayerM.instance.fireBullet;
+    GameMaster.instance.bulletType = PlayerM.instance.fireBullet;
     }
 
 }
@@ -121,7 +121,7 @@ public void TripleShotActive(){
     PlayerM.instance.tripleShot = true;
     GameMaster.instance.skillPoints -=1;
     isTripleShot = true;
-    GameMaster.instance.data.tripleShootData = PlayerM.instance.tripleShot;
+    GameMaster.instance.inGameData.tripleShootData = PlayerM.instance.tripleShot;
     }
 
 }
@@ -131,7 +131,7 @@ public void BallSkillActive(){
     GameMaster.instance.ballSkill.SetActive(true);
     GameMaster.instance.skillPoints -=1;
     isBallSkill = true;
-    GameMaster.instance.data.ballSkillData = true;
+    GameMaster.instance.inGameData.ballSkillData = true;
     }
 
 }
@@ -141,7 +141,7 @@ public void ShildSkillActive(){
     GameMaster.instance.shieldSkill.SetActive(true);
     GameMaster.instance.skillPoints -=1;
     isShieldSkill = true;
-    GameMaster.instance.data.shieldSkillData = true;
+    GameMaster.instance.inGameData.shieldSkillData = true;
     }
 
     

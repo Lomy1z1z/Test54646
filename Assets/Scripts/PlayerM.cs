@@ -45,6 +45,12 @@ public class PlayerM : MonoBehaviour
 
      public GameObject regulerBullet;
 
+<<<<<<< Updated upstream
+=======
+     public const float hitInvisblityReset = 0.5f;
+     
+     public Data data;
+>>>>>>> Stashed changes
      
 
      
@@ -143,14 +149,14 @@ public class PlayerM : MonoBehaviour
         
 
 
-        if(Time.time>=nextAttackTime && horizontalMove == 0 && verticalMove == 0 && target != null &&  tripleShot == false){
+        if(Time.time>=nextAttackTime && horizontalMove == 0 && verticalMove == 0 && target != null &&  GameMaster.instance.inGameData.tripleShootData == false){
         Shooting();
          nextAttackTime=Time.time+1/attackRate;
          }
 
         
 
-        if(Time.time>=nextAttackTime && horizontalMove == 0 && verticalMove == 0 && target != null && tripleShot == true){
+        if(Time.time>=nextAttackTime && horizontalMove == 0 && verticalMove == 0 && target != null && GameMaster.instance.inGameData.tripleShootData == true){
         tripleShooting();
          nextAttackTime=Time.time+1/attackRate;
          }
@@ -165,7 +171,7 @@ public class PlayerM : MonoBehaviour
         if(target != null){
         animator.SetBool("Shooting",true);
          transform.LookAt(target);
-        Instantiate(bullet,gun1.position,transform.rotation);
+        Instantiate(GameMaster.instance.bulletType,gun1.position,transform.rotation);
         }   
     }
    
@@ -177,9 +183,9 @@ public class PlayerM : MonoBehaviour
         if(target != null){
         animator.SetBool("Shooting",true);
          transform.LookAt(target);
-        Instantiate(bullet,gun1.position,transform.rotation);
-        Instantiate(bullet,gun2.position,gun2.transform.rotation);
-        Instantiate(bullet,gun3.position,gun3.transform.rotation);
+        Instantiate(GameMaster.instance.bulletType,gun1.position,transform.rotation);
+        Instantiate(GameMaster.instance.bulletType,gun2.position,gun2.transform.rotation);
+        Instantiate(GameMaster.instance.bulletType,gun3.position,gun3.transform.rotation);
         
         }   
     }
@@ -242,6 +248,10 @@ public class PlayerM : MonoBehaviour
 
         enemyDamage = Random.Range(minDamage,maxDamage);
 
+        
+    }
+
+    public void ResetPlayerPosition(){
         
     }
             

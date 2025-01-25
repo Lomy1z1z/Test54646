@@ -13,6 +13,7 @@ public class Data : ScriptableObject
 {
    public int levelData = GameMaster.instance.level;
 
+<<<<<<< Updated upstream
    public float minDamagedata = PlayerM.instance.minDamage;
    public float maxDamagedata = PlayerM.instance.maxDamage;
 
@@ -30,6 +31,17 @@ public class Data : ScriptableObject
 
    public bool ballSkillData;
    public bool shieldSkillData;
+=======
+    public GameObject bulletTypeData;
+    
+    public GameData GetGameData()
+    {
+        string json = JsonUtility.ToJson(gameData);
+        GameData newData = JsonUtility.FromJson<GameData>(json);
+        return newData;
+    }
+   
+>>>>>>> Stashed changes
 
    
    

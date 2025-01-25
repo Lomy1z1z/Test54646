@@ -116,6 +116,17 @@ public class WaveManeger : MonoBehaviour
          
      }
 
+     public void DestroyEnemies(){
+
+        for(int i = 0 ; i< enemies.Count; i ++){
+            Destroy(enemies[i].gameObject);
+        }
+
+        enemies.Clear();
+
+    
+     }
+
      
 
 

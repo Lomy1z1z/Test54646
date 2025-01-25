@@ -1,0 +1,1711 @@
+fileFormatVersion: 2
+guid: 1a977fc22064af34ca47504abf3305f1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 276
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57c60736d5b1304b95db36b293034e0
+      internalID: -869785551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 218
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72dd736d50ca32943abe0c68f077ce4f
+      internalID: 908529550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 218
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e033cffa6b4379143b9ccc0f4a7969e6
+      internalID: 445203763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_3
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 226
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40501d91056d5724eb8e96764242e729
+      internalID: 354546566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 0
+        width: 226
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195f459d823f8a14baa8d51e3a28d94b
+      internalID: 921844785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_5
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 226
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13671d5333e322148a36f889ebd2946f
+      internalID: 1712734456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_6
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 0
+        width: 254
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6ab91f9a5ff6e448a31fcabeddeb9a
+      internalID: 2123682534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_7
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 210
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96f2969e3ce43944ac88347f05fda57
+      internalID: -1044585850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_8
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 0
+        width: 237
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313580ebf7a2f304e9b7d536e5005e36
+      internalID: 638579232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_9
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 202
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ea4f5dfeb372b4eac13c49d028dda3
+      internalID: -689254480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_10
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 0
+        width: 243
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6afd8dada4e557488d8fcb16da9a916
+      internalID: -759137286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_11
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318eaef73feb9084c849a5faf8c89726
+      internalID: -175520425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_12
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 242
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8b89e073e2faf4395c139a7e3800c0
+      internalID: 2133580372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_13
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 242
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03142f0580224443a06fc6ef35a8a99
+      internalID: 179354258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_14
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 202
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1ec693d56f2e94bbe14a6b91f85fc6
+      internalID: -337168965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_15
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 0
+        width: 252
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56787b86ea3c8e04bb727424e9316e5f
+      internalID: 11304710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_16
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 242
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be974abd97b4e7b4881437d0425acbc8
+      internalID: 76119226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_17
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 0
+        width: 254
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18dbe3a2953031244b98e80454ca537c
+      internalID: -535082635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_18
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 0
+        width: 229
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da131dc9f23dbff4ab67a2257e4472ef
+      internalID: -1647069341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_19
+      rect:
+        serializedVersion: 2
+        x: 2279
+        y: 0
+        width: 212
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e096acb0c8c90f4c97ae780eff55ae9
+      internalID: 111174851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_20
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 218
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a28f9eeebb6974892aeac80aea4216
+      internalID: 967757265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_21
+      rect:
+        serializedVersion: 2
+        x: 2554
+        y: 218
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49cc363549e75c428d34bde2e72a472
+      internalID: -1264084668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_22
+      rect:
+        serializedVersion: 2
+        x: 2561
+        y: 0
+        width: 139
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829defcc767e7a74ab07a5cb018313ee
+      internalID: 2060002645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_23
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 202
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec073298aad6f29479946129546fd057
+      internalID: 1967749562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_24
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 202
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141852ebadc3b6b4ba56c593cdb3ccc3
+      internalID: -1528926500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_25
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 194
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e14cdc15c251e46a440d2923bcf5b2
+      internalID: -317416374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_26
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 194
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e9d3bc208900744bebeaf3aa112532
+      internalID: -448069765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_27
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 185
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a59a7e91c0a3dc4b817ed5a93737a89
+      internalID: -207856917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_28
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 185
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499f885c97bc60644841b58a0744c3f9
+      internalID: -1073813559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_29
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 185
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d58b9dfef5a78943a1ee172639c4036
+      internalID: -339795358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_30
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 177
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3dd52a99b634c469c13998df23457a
+      internalID: -841652363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_31
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 169
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69fa3b4849c701546959ed105f4e14f2
+      internalID: -26818831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_32
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 161
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be8c9d22dffe0045b900bb524b1f9a6
+      internalID: 1753164196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_33
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f2372d8068e18458a1360350b5bc53
+      internalID: 1392063784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_34
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463b723e64583c642a1e183c64ec582d
+      internalID: -400502866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_35
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 97
+        width: 9
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f1fcea698fe5843a9d3555a54503f0
+      internalID: 332393771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_36
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 145
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38739fcf19111ff4592cf207bbcfd447
+      internalID: -664950636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_37
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf44745f771e7343956caaf5b64b23d
+      internalID: -879679619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_38
+      rect:
+        serializedVersion: 2
+        x: 2528
+        y: 110
+        width: 10
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191fc87adea26a747b31448d3b97a82e
+      internalID: -1321927896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_39
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 145
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc79eea74232084fa10bd71fcd40adc
+      internalID: 161197145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_40
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 137
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5490643b0d9bed040a29f8a84280bc68
+      internalID: -1431745475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_41
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 129
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e44bf9bc8b8ea448ee7f1382307b3a
+      internalID: -421593209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_42
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 112
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8299033806728c24e986ca48d7240229
+      internalID: -1147435357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_43
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 113
+        width: 5
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4463f7ff287b2374383bf9acafc38e92
+      internalID: -288173405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_44
+      rect:
+        serializedVersion: 2
+        x: 2699
+        y: 77
+        width: 9
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec290123a5aeed49a01c09e8aca9fff
+      internalID: 1884610342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_45
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 113
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aac8ced6d9bfc646a185d34967555c4
+      internalID: 1335591561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_46
+      rect:
+        serializedVersion: 2
+        x: 2489
+        y: 105
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb214f66ee80b944a81f2c21d1f466a
+      internalID: 1648066840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_47
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 89
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86edd3da2ef81347a6f53a865030cfb
+      internalID: -317821031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_48
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 81
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bed9082fbeacc147b7fd5fd9ce1dd5f
+      internalID: 169219396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_49
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 97
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3514391a5fc3b4246a7c369f31c48c3d
+      internalID: 1086969567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_50
+      rect:
+        serializedVersion: 2
+        x: 2489
+        y: 89
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ab652685cae4b4bacd31f8499b4d14
+      internalID: -1717138250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_51
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 89
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef332f3fc04d144ba75892c009502c4
+      internalID: 1698233765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_52
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 62
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4cfe586c3e069c41a15a4a2ca175957
+      internalID: 607704018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_53
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 73
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd44e72079306144d970192379861547
+      internalID: -785577534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_54
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 48
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543bc430d92374a49a5fa0fe837de631
+      internalID: 1762474041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_55
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be51643e6f1cad6459bea4b8f91bc58e
+      internalID: 1032690959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_56
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79526af3941081a428140f280f85ac09
+      internalID: -975787288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_57
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 56
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfaffe577639437489c74f51b3f44ec4
+      internalID: 1843446000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_58
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 48
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa668eb69e00afa43a09407f37ef2582
+      internalID: 134504591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_59
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741b9c2b93ddce746a6deb90432a8a2f
+      internalID: -1100260008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_60
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 55
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915fdfd865f7a6945bf40f70a6fa54f5
+      internalID: -960899792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_61
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 54
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56779412e2b6d24cb14c62d27b2dfbc
+      internalID: -1442035649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_62
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8103ddf025db492498bc7c3f34bd385a
+      internalID: -822805460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_63
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 24
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8597181f96c32084da9e85c54ee8ab19
+      internalID: -1748372268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_64
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 7
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4db946b45569e64bad1f6b825d109bd
+      internalID: 786150070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_65
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 28
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6b5eae97f2f964dadafd4f14b0fe25
+      internalID: -1394685810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_66
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7c0452dd611a5449fe5366d9554a4b
+      internalID: 1619341094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_67
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf9a425af4caea4ba6369aea57ee6bd
+      internalID: 551032684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_68
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7647c372c41de874bb46237cc1592926
+      internalID: 1528851692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_69
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 0
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42788f0fd11fa26418007d0ef568c2b8
+      internalID: -156733189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_70
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 0
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e30d19a5b1187140b0125982ea6bf51
+      internalID: -685691604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin_Spread_Casual1_71
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 0
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8222208f6c5c94eba4704a2b3669e8
+      internalID: -902233789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Coin_Spread_Casual1_0: -869785551
+      Coin_Spread_Casual1_1: 908529550
+      Coin_Spread_Casual1_10: -759137286
+      Coin_Spread_Casual1_11: -175520425
+      Coin_Spread_Casual1_12: 2133580372
+      Coin_Spread_Casual1_13: 179354258
+      Coin_Spread_Casual1_14: -337168965
+      Coin_Spread_Casual1_15: 11304710
+      Coin_Spread_Casual1_16: 76119226
+      Coin_Spread_Casual1_17: -535082635
+      Coin_Spread_Casual1_18: -1647069341
+      Coin_Spread_Casual1_19: 111174851
+      Coin_Spread_Casual1_2: 445203763
+      Coin_Spread_Casual1_20: 967757265
+      Coin_Spread_Casual1_21: -1264084668
+      Coin_Spread_Casual1_22: 2060002645
+      Coin_Spread_Casual1_23: 1967749562
+      Coin_Spread_Casual1_24: -1528926500
+      Coin_Spread_Casual1_25: -317416374
+      Coin_Spread_Casual1_26: -448069765
+      Coin_Spread_Casual1_27: -207856917
+      Coin_Spread_Casual1_28: -1073813559
+      Coin_Spread_Casual1_29: -339795358
+      Coin_Spread_Casual1_3: 354546566
+      Coin_Spread_Casual1_30: -841652363
+      Coin_Spread_Casual1_31: -26818831
+      Coin_Spread_Casual1_32: 1753164196
+      Coin_Spread_Casual1_33: 1392063784
+      Coin_Spread_Casual1_34: -400502866
+      Coin_Spread_Casual1_35: 332393771
+      Coin_Spread_Casual1_36: -664950636
+      Coin_Spread_Casual1_37: -879679619
+      Coin_Spread_Casual1_38: -1321927896
+      Coin_Spread_Casual1_39: 161197145
+      Coin_Spread_Casual1_4: 921844785
+      Coin_Spread_Casual1_40: -1431745475
+      Coin_Spread_Casual1_41: -421593209
+      Coin_Spread_Casual1_42: -1147435357
+      Coin_Spread_Casual1_43: -288173405
+      Coin_Spread_Casual1_44: 1884610342
+      Coin_Spread_Casual1_45: 1335591561
+      Coin_Spread_Casual1_46: 1648066840
+      Coin_Spread_Casual1_47: -317821031
+      Coin_Spread_Casual1_48: 169219396
+      Coin_Spread_Casual1_49: 1086969567
+      Coin_Spread_Casual1_5: 1712734456
+      Coin_Spread_Casual1_50: -1717138250
+      Coin_Spread_Casual1_51: 1698233765
+      Coin_Spread_Casual1_52: 607704018
+      Coin_Spread_Casual1_53: -785577534
+      Coin_Spread_Casual1_54: 1762474041
+      Coin_Spread_Casual1_55: 1032690959
+      Coin_Spread_Casual1_56: -975787288
+      Coin_Spread_Casual1_57: 1843446000
+      Coin_Spread_Casual1_58: 134504591
+      Coin_Spread_Casual1_59: -1100260008
+      Coin_Spread_Casual1_6: 2123682534
+      Coin_Spread_Casual1_60: -960899792
+      Coin_Spread_Casual1_61: -1442035649
+      Coin_Spread_Casual1_62: -822805460
+      Coin_Spread_Casual1_63: -1748372268
+      Coin_Spread_Casual1_64: 786150070
+      Coin_Spread_Casual1_65: -1394685810
+      Coin_Spread_Casual1_66: 1619341094
+      Coin_Spread_Casual1_67: 551032684
+      Coin_Spread_Casual1_68: 1528851692
+      Coin_Spread_Casual1_69: -156733189
+      Coin_Spread_Casual1_7: -1044585850
+      Coin_Spread_Casual1_70: -685691604
+      Coin_Spread_Casual1_71: -902233789
+      Coin_Spread_Casual1_8: 638579232
+      Coin_Spread_Casual1_9: -689254480
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

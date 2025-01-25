@@ -143,22 +143,33 @@ public void TripleShotActive(){
 
 }
 public void BallSkillActive(){
-    if(GameMaster.instance.skillPoints > 0 && isBallSkill == false){
+    if(GameMaster.instance.skillPoints > 0 && GameMaster.instance.inGameData.ballSkillData == false){
     ballSkillPick.SetActive(true);
     GameMaster.instance.ballSkill.SetActive(true);
     GameMaster.instance.skillPoints -=1;
+<<<<<<< Updated upstream
     isBallSkill = true;
     GameMaster.instance.data.ballSkillData = true;
+=======
+    //isBallSkill = true;
+    GameMaster.instance.inGameData.ballSkillData = true;
+>>>>>>> Stashed changes
     }
+    
 
 }
 public void ShildSkillActive(){
-    if(GameMaster.instance.skillPoints > 0 && isShieldSkill == false){
+    if(GameMaster.instance.skillPoints > 0 && GameMaster.instance.inGameData.shieldSkillData == false){
     shieldSkillPick.SetActive(true);
     GameMaster.instance.shieldSkill.SetActive(true);
     GameMaster.instance.skillPoints -=1;
+<<<<<<< Updated upstream
     isShieldSkill = true;
     GameMaster.instance.data.shieldSkillData = true;
+=======
+    //isShieldSkill = true;
+    GameMaster.instance.inGameData.shieldSkillData = true;
+>>>>>>> Stashed changes
     }
 
     

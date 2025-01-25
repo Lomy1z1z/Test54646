@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b8f77ef5f09d942a0f328506d199a3, type: 3}
   m_Name: data
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   levelData: 1
   minDamagedata: 1
   maxDamagedata: 10
@@ -24,3 +25,18 @@ MonoBehaviour:
   tripleShootData: 0
   ballSkillData: 0
   shildSkillData: 0
+=======
+  gameData:
+    levelData: 1
+    minDamageData: 1
+    maxDamageData: 10
+    hpImageData: 0.3
+    hpBackGroundImageData: 0.3
+    hpData: 30
+    runSpeedData: 25
+    attackRateData: 1
+    tripleShootData: 0
+    ballSkillData: 0
+    shieldSkillData: 0
+  bulletTypeData: {fileID: 3540496837989767626, guid: 4a64e04045b19cb4e988bf81047a4298, type: 3}
+>>>>>>> Stashed changes
